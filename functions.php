@@ -45,6 +45,8 @@ add_action( 'wp_enqueue_scripts', 'frost_enqueue_style_sheet' );
 function frost_enqueue_style_sheet() {
 
 	wp_enqueue_style( 'frost', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
+	
+	wp_enqueue_style( 'osi', get_template_directory_uri() . '/osi-custom.css', array(), wp_get_theme()->get( 'Version' ) );
 
 }
 
@@ -79,6 +81,10 @@ function frost_register_block_styles() {
 		),
 		'core/social-links' => array(
 			'outline' => __( 'Outline', 'frost' ),
+		),
+		'core/heading' => array(
+			'underline-animated' => __( 'Underline Animated', 'frost' ),
+			'double-underline-animated' => __( 'Double Underline Animated', 'frost' ),
 		),
 	);
 
