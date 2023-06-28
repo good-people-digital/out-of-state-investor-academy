@@ -1,0 +1,32 @@
+.is-style-double-underline-animated mark {
+  position: relative;
+  overflow: hidden;
+  color: unset !important;
+  background: unset !important;
+}
+
+.is-style-double-underline-animated mark::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  background-image: url("assets/images/underline-deco.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
