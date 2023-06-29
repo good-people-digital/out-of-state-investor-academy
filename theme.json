@@ -114,7 +114,7 @@
 			},
 			"lineHeight": {
 				"body": 1.75,
-				"heading": 1.1,
+				"heading": 1.2,
 				"medium": 1.5,
 				"one": 1
 			},
@@ -183,9 +183,29 @@
 			"fluid": true,
 			"fontFamilies": [
 				{
+					"fontFamily": "Montserrat, sans-serif",
+					"name": "Montserrat",
+					"slug": "primary",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Montserrat",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "500 800",
+							"src": [ "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800;900&display=swap" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "monospace",
+					"name": "Monospace",
+					"slug": "monospace"
+				},
+				{
 					"fontFamily": "Outfit, sans-serif",
 					"name": "Outfit",
-					"slug": "primary",
+					"slug": "secondary",
 					"fontFace": [
 						{
 							"fontDisplay": "block",
@@ -196,83 +216,78 @@
 							"src": [ "file:./assets/fonts/Outfit-Variable.woff2" ]
 						}
 					]
-				},
-				{
-					"fontFamily": "monospace",
-					"name": "Monospace",
-					"slug": "monospace"
 				}
 			],
 			"fontSizes": [
 				{
 					"fluid": false,
 					"name": "xSmall",
-					"size": "16px",
+					"size": "12px",
 					"slug": "x-small"
 				},
 				{
 					"fluid": false,
 					"name": "Small",
-					"size": "18px",
+					"size": "14px",
 					"slug": "small"
 				},
 				{
 					"fluid": {
-						"min": "18px",
-						"max": "20px"
+						"min": "14px",
+						"max": "16px"
 					},
 					"name": "Medium",
-					"size": "20px",
+					"size": "16px",
 					"slug": "medium"
+				},
+				{
+					"fluid": {
+						"min": "16px",
+						"max": "20px"
+					},
+					"name": "Large",
+					"size": "20px",
+					"slug": "large"
 				},
 				{
 					"fluid": {
 						"min": "20px",
 						"max": "24px"
 					},
-					"name": "Large",
-					"size": "24px",
-					"slug": "large"
-				},
-				{
-					"fluid": {
-						"min": "24px",
-						"max": "30px"
-					},
 					"name": "xLarge",
-					"size": "30px",
+					"size": "24px",
 					"slug": "x-large"
 				},
 				{
 					"fluid": {
-						"min": "30px",
-						"max": "36px"
+						"min": "24px",
+						"max": "28px"
 					},
-					"name": "36px",
-					"size": "36px",
-					"slug": "max-36"
+					"name": "28px",
+					"size": "28px",
+					"slug": "max-28"
 				},
 				{
 					"fluid": {
-						"min": "36px",
-						"max": "48px"
+						"min": "28px",
+						"max": "46px"
 					},
-					"name": "48px",
-					"size": "48px",
-					"slug": "max-48"
+					"name": "46px",
+					"size": "46px",
+					"slug": "max-46"
 				},
 				{
 					"fluid": {
-						"min": "42px",
-						"max": "60px"
+						"min": "46px",
+						"max": "56px"
 					},
-					"name": "60px",
-					"size": "60px",
-					"slug": "max-60"
+					"name": "56px",
+					"size": "56px",
+					"slug": "max-56"
 				},
 				{
 					"fluid": {
-						"min": "48px",
+						"min": "56px",
 						"max": "72px"
 					},
 					"name": "72px",
@@ -544,32 +559,32 @@
 			},
 			"h1": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--max-36)"
+					"fontSize": "var(--wp--preset--font-size--max-56)"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--x-large)"
+					"fontSize": "var(--wp--preset--font-size--max-46)"
 				}
 			},
 			"h3": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--large)"
+					"fontSize": "var(--wp--preset--font-size--max-28)"
 				}
 			},
 			"h4": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--medium)"
+					"fontSize": "var(--wp--preset--font-size--x-large)"
 				}
 			},
 			"h5": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--small)"
+					"fontSize": "var(--wp--preset--font-size--medium)"
 				}
 			},
 			"h6": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--small)"
+					"fontSize": "var(--wp--preset--font-size--x-small)"
 				}
 			},
 			"heading": {
