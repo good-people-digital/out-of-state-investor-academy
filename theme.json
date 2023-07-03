@@ -213,12 +213,12 @@
 					"slug": "primary",
 					"fontFace": [
 						{
-							"fontDisplay": "block",
+							"fontDisplay": "swap",
 							"fontFamily": "Montserrat",
 							"fontStretch": "normal",
 							"fontStyle": "normal",
-							"fontWeight": "500 800",
-							"src": [ "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800;900&display=swap" ]
+							"fontWeight": "100 900",
+							"src": [ "file:./assets/fonts/Montserrat-VariableFont_wght.woff2" ]
 						}
 					]
 				},
@@ -326,6 +326,7 @@
 	"styles": {
 		"blocks": {
 			"core/button": {
+				"css": ".wp-block-button__link:hover { background-color: #E49407; border-color: #E49407;}",
 				"variations": {
 					"outline" : {
 						"border": {
@@ -333,6 +334,7 @@
 							"style": "solid",
 							"width": "4px"
 						},
+
 						"spacing": {
 							"padding": {
 								"top": "18px",
@@ -554,15 +556,15 @@
 				},
 				"spacing": {
 					"padding": {
-						"top": "15px",
-						"right": "30px",
-						"bottom": "15px",
-						"left": "30px"
+						"top": "22px",
+						"right": "24px",
+						"bottom": "22px",
+						"left": "24px"
 					}
 				},
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--x-small)",
-					"fontWeight": "var(--wp--custom--font-weight--regular)"
+					"fontSize": "var(--wp--preset--font-size--medium)",
+					"fontWeight": "var(--wp--custom--font-weight--extra-bold)"
 				}
 			},
 			"caption": {
@@ -614,7 +616,7 @@
 			},
 			"heading": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--font-weight--regular)",
+					"fontWeight": "var(--wp--custom--font-weight--extra-bold)",
 					"lineHeight": "var(--wp--custom--line-height--heading)"
 				}
 			},
@@ -636,7 +638,7 @@
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--primary)",
 			"fontSize": "var(--wp--preset--font-size--medium)",
-			"fontWeight": "var(--wp--custom--font-weight--light)",
+			"fontWeight": "var(--wp--custom--font-weight--medium)",
 			"lineHeight": "var(--wp--custom--line-height--body)"
 		}
 	},

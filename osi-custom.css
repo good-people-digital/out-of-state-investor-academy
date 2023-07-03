@@ -1,3 +1,10 @@
+/* Border Radius
+--------------------------------------------- */
+.border-r-40,
+.is-style-border-rounded .wp-block-column {
+  border-radius: 40px;
+}
+
 .is-style-double-underline-animated mark {
   position: relative;
   overflow: hidden;
