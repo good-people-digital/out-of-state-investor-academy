@@ -82,6 +82,9 @@ function frost_register_block_styles() {
 		'core/social-links' => array(
 			'outline' => __( 'Outline', 'frost' ),
 		),
+		'core/columns' => array(
+			'border-rounded' => __( 'Border Rounded', 'frost' ),
+		),
 		'core/heading' => array(
 			'underline-animated' => __( 'Underline Animated', 'frost' ),
 			'double-underline-animated' => __( 'Double Underline Animated', 'frost' ),
