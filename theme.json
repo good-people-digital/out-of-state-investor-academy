@@ -57,12 +57,12 @@
 				{
 					"name": "Primary and White",
 					"slug": "primary-and-white",
-					"colors": [ "#0000ff", "#ffffff" ]
+					"colors": [ "#F5AC2B", "#ffffff" ]
 				},
 				{
 					"name": "Secondary and White",
 					"slug": "secondary-and-white",
-					"colors": [ "#000099", "#ffffff" ]
+					"colors": [ "#0034B8", "#ffffff" ]
 				}
 			],
 			"gradients": [
@@ -79,24 +79,49 @@
 					"slug": "base"
 				},
 				{
-					"color": "#000000",
+					"color": "#01163F",
 					"name": "Contrast",
 					"slug": "contrast"
 				},
 				{
-					"color": "#0000ff",
+					"color": "#F5AC2B",
 					"name": "Primary",
 					"slug": "primary"
 				},
 				{
-					"color": "#000099",
+					"color": "#0034B8",
 					"name": "Secondary",
 					"slug": "secondary"
 				},
 				{
-					"color": "#eeeeee",
+					"color": "#EAEDF3",
 					"name": "Neutral",
 					"slug": "neutral"
+				},
+								{
+					"color": "#5D83FA",
+					"name": "Blue2",
+					"slug": "Blue2"
+				},
+				{
+					"color": "#FFD371",
+					"name": "Orange2",
+					"slug": "Orange2"
+				},
+				{
+					"color": "#FDF199",
+					"name": "Orange3",
+					"slug": "Orange3"
+				},
+				{
+					"color": "#717885",
+					"name": "Gray",
+					"slug": "Gray"
+				},
+				{
+					"color": "#9CAAC5",
+					"name": "Gray3",
+					"slug": "Gray3"
 				}
 			]
 		},
@@ -304,16 +329,16 @@
 				"variations": {
 					"outline" : {
 						"border": {
-							"color": "currentColor",
+							"color": "var(--wp--preset--color--primary)",
 							"style": "solid",
-							"width": "1px"
+							"width": "4px"
 						},
 						"spacing": {
 							"padding": {
-								"top": "14px",
-								"right": "29px",
-								"bottom": "14px",
-								"left": "29px"
+								"top": "18px",
+								"right": "24px",
+								"bottom": "18px",
+								"left": "24px"
 							}
 						}
 					}
@@ -521,7 +546,7 @@
 		"elements": {
 			"button": {
 				"border": {
-					"radius": "5px"
+					"radius": "40px"
 				},
 				"color": {
 					"background": "var(--wp--preset--color--primary)",
