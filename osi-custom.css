@@ -5,35 +5,122 @@
   border-radius: 40px;
 }
 
-.is-style-double-underline-animated mark {
+/* Underline Animations for Titles
+--------------------------------------------- */
+.is-style-double-underline-animated mark,
+.is-style-underline-animated mark {
   position: relative;
   overflow: hidden;
   color: unset !important;
   background: unset !important;
 }
 
-.is-style-double-underline-animated mark::after {
+.is-style-double-underline-animated mark::after,
+.is-style-underline-animated mark::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 10px;
-  background-image: url("assets/images/underline-deco.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
-  animation: myAnim 2s ease 0s 1 normal forwards;
 }
 
-@keyframes myAnim {
+.is-style-double-underline-animated mark::after {
+  background-image: url("assets/images/double-underlined.svg");
+}
+
+.is-style-underline-animated mark::after {
+  background-image: url("assets/images/underline-deco.svg");
+}
+
+.is-style-double-underline-animated.animate mark::after,
+.instant-animate .is-style-double-underline-animated mark::after,
+.is-style-underline-animated.animate mark::after,
+.instant-animate .is-style-underline-animated mark::after {
+  animation: underlineAnim 2s ease 0s 1 normal forwards;
+}
+
+@keyframes underlineAnim {
   0% {
     opacity: 0;
-    transform: translateX(-150px);
+    transform: translateX(-100px);
   }
 
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+/* Girl Image Animated
+--------------------------------------------- */
+.is-style-image-girl-animated::after {
+  content: url("assets/images/girl-decor-top.svg");
+  right: -110px;
+  top: 0;
+  opacity: 0; /* Initial opacity */
+  animation: fadeIn 1s forwards;
+  animation-delay: 2s;
+}
+
+.is-style-image-girl-animated::before {
+  content: url("assets/images/girl-decor-bottom.svg");
+  right: 100%;
+  bottom: -9px;
+  opacity: 0; /* Initial opacity */
+  animation: fadeIn 1s forwards;
+  animation-delay: 1.5s;
+}
+
+.is-style-image-girl-animated {
+  position: relative;
+}
+
+.is-style-image-girl-animated::after,
+.is-style-image-girl-animated::before {
+  position: absolute;
+}
+
+.is-style-image-girl-animated {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 55px 10px;
+  opacity: 0; /* Initial opacity */
+  animation: bkgImg 1s forwards;
+  animation-delay: 0.2s;
+}
+
+.is-style-image-girl-animated img {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes bkgImg {
+  from {
+    opacity: 0;
+    background-image: none;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    background-image: url("assets/images/background-girl-image.png");
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }

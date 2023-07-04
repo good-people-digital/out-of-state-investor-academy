@@ -48,6 +48,8 @@ function frost_enqueue_style_sheet() {
 	
 	wp_enqueue_style( 'osi', get_template_directory_uri() . '/osi-custom.css', array(), wp_get_theme()->get( 'Version' ) );
 
+	wp_enqueue_script( 'osi-js', get_template_directory_uri() . '/osi-custom.js', array( 'jquery' ), '1.8.1', true );
+
 }
 
 /**
@@ -68,6 +70,8 @@ function frost_register_block_styles() {
 		'core/image' => array(
 			'shadow-light' => __( 'Shadow', 'frost' ),
 			'shadow-solid' => __( 'Solid', 'frost' ),
+			'image-girl-animated' => __( 'Girl Img Animated', 'frost' ),
+			'image-w-decorations' => __( 'Image Decorated', 'frost' ),
 		),
 		'core/list' => array(
 			'no-disc' => __( 'No Disc', 'frost' ),
@@ -88,7 +92,7 @@ function frost_register_block_styles() {
 		'core/heading' => array(
 			'underline-animated' => __( 'Underline Animated', 'frost' ),
 			'double-underline-animated' => __( 'Double Underline Animated', 'frost' ),
-		),
+		)
 	);
 
 	foreach ( $block_styles as $block => $styles ) {
@@ -130,3 +134,28 @@ function frost_register_block_pattern_categories() {
 }
 
 add_action( 'init', 'frost_register_block_pattern_categories' );
+
+
+// Allow SVG file uploads
+function custom_mime_types( $mimes ) {
+    // Add SVG to the list of allowed file types
+    $mimes['svg'] = 'image/svg+xml';
+    $mimes['svgz'] = 'image/svg+xml';
+    
+    return $mimes;
+}
+add_filter( 'upload_mimes', 'custom_mime_types' );
+
+// Enable SVG thumbnail preview
+function custom_svg_thumb_size( $sizes ) {
+    $sizes['svg'] = __( 'SVG Image' );
+    
+    return $sizes;
+}
+add_filter( 'image_size_names_choose', 'custom_svg_thumb_size' );
+function enable_svg_upload( $upload_mimes ) {
+    $upload_mimes['svg'] = 'image/svg+xml';
+    $upload_mimes['svgz'] = 'image/svg+xml';
+    return $upload_mimes;
+}
+add_filter( 'upload_mimes', 'enable_svg_upload', 10, 1 );
