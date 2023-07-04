@@ -71,7 +71,8 @@ function frost_register_block_styles() {
 			'shadow-light' => __( 'Shadow', 'frost' ),
 			'shadow-solid' => __( 'Solid', 'frost' ),
 			'image-girl-animated' => __( 'Girl Img Animated', 'frost' ),
-			'image-w-decorations' => __( 'Image Decorated', 'frost' ),
+			'yellow-decorations' => __( 'Yellow Decor', 'frost' ),
+			'blue-decorations' => __( 'Blue Decor', 'frost' ),
 		),
 		'core/list' => array(
 			'no-disc' => __( 'No Disc', 'frost' ),
