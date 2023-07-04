@@ -101,27 +101,27 @@
 								{
 					"color": "#5D83FA",
 					"name": "Blue2",
-					"slug": "Blue2"
+					"slug": "blue2"
 				},
 				{
 					"color": "#FFD371",
 					"name": "Orange2",
-					"slug": "Orange2"
+					"slug": "orange2"
 				},
 				{
 					"color": "#FDF199",
 					"name": "Orange3",
-					"slug": "Orange3"
+					"slug": "orange3"
 				},
 				{
 					"color": "#717885",
 					"name": "Gray",
-					"slug": "Gray"
+					"slug": "gray"
 				},
 				{
 					"color": "#9CAAC5",
 					"name": "Gray3",
-					"slug": "Gray3"
+					"slug": "gray3"
 				}
 			]
 		},
