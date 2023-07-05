@@ -71,14 +71,14 @@ input,
 select,
 textarea {
   background-color: var(--wp--preset--color--base);
-  border: 1px solid var(--wp--preset--color--contrast);
-  border-radius: 0;
-  color: var(--wp--preset--color--contrast);
+  border: unset;
+  border-radius: 40px;
+  color: var(--wp--preset--color--gray);
   font-family: var(--wp--preset--font-family--primary);
   font-size: var(--wp--preset--font-size--medium);
-  font-weight: var(--wp--custom--font-weight--light);
+  font-weight: var(--wp--custom--font-weight--medium);
   line-height: var(--wp--custom--line-height--body);
-  padding: 10px 20px;
+  padding: 18px 24px;
   width: 100%;
 }
 
@@ -104,9 +104,8 @@ textarea {
 }
 
 ::placeholder {
-  color: var(--wp--preset--color--contrast);
-  font-size: var(--wp--preset--font-size--small);
-  opacity: 0.5;
+  color: var(--wp--preset--color--gray);
+  font-size: var(--wp--preset--font-size--medium);
 }
 
 /* Blocks
@@ -204,8 +203,10 @@ textarea {
 	--------------------------------------------- */
 
   .wp-block-navigation-item.is-style-outline a {
-    border: 1px solid currentColor;
-    padding: 8px 15px;
+    border: 1px solid var(--wp--preset--color--primary);
+    padding: 10px 15px;
+    background-color: var(--wp--preset--color--primary);
+    border-radius: 40px;
   }
 }
 

@@ -330,7 +330,7 @@
 				"variations": {
 					"outline" : {
 						"border": {
-							"color": "var(--wp--preset--color--primary)",
+							"color": "currentColor",
 							"style": "solid",
 							"width": "4px"
 						},

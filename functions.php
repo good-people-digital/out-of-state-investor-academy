@@ -62,6 +62,7 @@ function frost_register_block_styles() {
 	$block_styles = array(
 		'core/columns' => array(
 			'columns-reverse' => __( 'Reverse', 'frost' ),
+			'border-rounded' => __( 'Border Rounded', 'frost' ),
 		),
 		'core/group' => array(
 			'shadow-light' => __( 'Shadow', 'frost' ),
@@ -87,13 +88,13 @@ function frost_register_block_styles() {
 		'core/social-links' => array(
 			'outline' => __( 'Outline', 'frost' ),
 		),
-		'core/columns' => array(
-			'border-rounded' => __( 'Border Rounded', 'frost' ),
-		),
 		'core/heading' => array(
 			'underline-animated' => __( 'Underline Animated', 'frost' ),
 			'double-underline-animated' => __( 'Double Underline Animated', 'frost' ),
-		)
+		),
+		'core/button' => array(
+			'color-outline' => __( 'Color Outline', 'frost' ),
+		),
 	);
 
 	foreach ( $block_styles as $block => $styles ) {
@@ -160,3 +161,20 @@ function enable_svg_upload( $upload_mimes ) {
     return $upload_mimes;
 }
 add_filter( 'upload_mimes', 'enable_svg_upload', 10, 1 );
+
+
+function custom_theme_customizer( $wp_customize ) {
+    // Add a custom setting
+    $wp_customize->add_setting( 'custom_setting', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ) );
+
+    // Add a control for the custom setting
+    $wp_customize->add_control( 'custom_setting', array(
+        'label'    => __( 'Custom Setting', 'textdomain' ),
+        'section'  => 'custom_section',
+        'type'     => 'text',
+    ) );
+}
+add_action( 'customize_register', 'custom_theme_customizer' );

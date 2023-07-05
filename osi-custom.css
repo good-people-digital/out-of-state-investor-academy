@@ -5,6 +5,10 @@
   border-radius: 40px;
 }
 
+.is-style-border-rounded .wp-block-column .wp-block-cover img {
+  border-radius: 40px 40px 0 0;
+}
+
 /* Underline Animations for Titles
 --------------------------------------------- */
 .is-style-double-underline-animated mark,
@@ -55,6 +59,7 @@
 
 /* Girl Image Animated
 --------------------------------------------- */
+
 .aos-animate.is-style-image-girl-animated::after {
   content: url("assets/images/girl-decor-top.svg");
   right: -110px;
@@ -119,6 +124,23 @@
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .aos-animate.is-style-image-girl-animated::after,
+  .aos-animate.is-style-image-girl-animated::before {
+    content: unset;
+  }
+}
+@media only screen and (min-width: 786px) and (max-width: 1023px) {
+  .aos-animate.is-style-image-girl-animated::after,
+  .aos-animate.is-style-image-girl-animated::before {
+    content: unset;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  .aos-animate.is-style-image-girl-animated::after {
+    top: -85px;
+  }
+}
 /* Decor Image Animated
 --------------------------------------------- */
 
@@ -164,7 +186,7 @@
   width: 4%;
   height: 4%;
   border-radius: 22%;
-  left: 10%;
+  left: 14%;
   opacity: 0;
   animation: slideLeft 1s forwards;
 }
@@ -175,7 +197,7 @@
   width: 40%;
   height: 4%;
   border-radius: 6px;
-  bottom: 10%;
+  bottom: 14%;
   right: 0;
   opacity: 0;
   animation: slideLeft 1s forwards;
@@ -208,31 +230,102 @@
   }
 }
 
+/* Query Block Style
+--------------------------------------------- */
 .wp-block-query .wp-block-post-template li {
   margin-bottom: 0 !important;
   min-height: 100%;
   display: block;
-}
-.wp-block-query .wp-block-post-template li > div {
-  height: 100%;
+  min-height: 100%;
   border-radius: 40px;
 }
+
 .wp-block-query .wp-block-post-template li figure {
   background-color: white;
 }
-.wp-block-query .wp-block-post-template li:nth-child(1) div {
+.wp-block-query .wp-block-post-template li:nth-child(1) {
   background-color: var(--wp--preset--color--orange-3);
 }
 
-.wp-block-query .wp-block-post-template li:nth-child(2) div {
+.wp-block-query .wp-block-post-template li:nth-child(2) {
   transition-delay: 0.5s;
   background-color: var(--wp--preset--color--orange-2);
 }
-.wp-block-query .wp-block-post-template li:nth-child(3) div {
+.wp-block-query .wp-block-post-template li:nth-child(3) {
   background-color: var(--wp--preset--color--primary);
   transition-delay: 1s;
 }
 
 .wp-block-query .wp-block-post-template {
   align-items: stretch;
+}
+
+/* Button Variations
+--------------------------------------------- */
+.is-style-outline mark {
+  background: transparent !important;
+}
+
+/* Form Style
+--------------------------------------------- */
+input[type="submit"] {
+  background-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--contrast);
+  font-weight: var(--wp--custom--font-weight--extra-bold);
+  text-transform: uppercase;
+  letter-spacing: 1.28px;
+}
+
+form.inline-form {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+form.inline-form input[type="submit"] {
+  width: 50%;
+}
+
+.zoom-in-hover .wp-block-column:hover {
+  transform: scale(1.1) !important;
+}
+
+.overflow-x-hidden,
+main.wp-block-group {
+  overflow: hidden;
+}
+
+.wp-block-vpb-video .plyr__poster {
+  background-color: transparent;
+}
+.wp-block-vpb-video .plyr__video-wrapper,
+.wp-block-vpb-video .plyr--video {
+  background: transparent;
+}
+.wp-block-vpb-video .plyr__control.plyr__control--overlaid svg {
+  display: none;
+}
+.wp-block-vpb-video .plyr__control.plyr__control--overlaid {
+  background-image: url("assets/images/play-button.svg");
+  padding: 5%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+.plyr--video .plyr__control.plyr__tab-focus,
+.plyr--video .plyr__control:hover,
+.plyr--video .plyr__control[aria-expanded="true"] {
+  background-color: var(--wp--preset--color--primary);
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+.plyr--full-ui input[type="range"] {
+  color: var(--wp--preset--color--primary);
+}
+
+@media only screen and (min-width: 600px) and (max-width: 870px) {
+  header .is-content-justification-space-between {
+    justify-content: center !important;
+  }
 }
