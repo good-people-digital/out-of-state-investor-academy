@@ -329,3 +329,7 @@ main.wp-block-group {
     justify-content: center !important;
   }
 }
+
+#attend-summit .wp-block-column:hover {
+  box-shadow: 0px 0px 48px 0px rgba(9, 19, 68, 0.25);
+}
