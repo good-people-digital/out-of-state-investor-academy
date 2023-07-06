@@ -12,7 +12,8 @@
 /* Underline Animations for Titles
 --------------------------------------------- */
 .is-style-double-underline-animated mark,
-.is-style-underline-animated mark {
+.is-style-underline-animated mark,
+.is-style-double-underline-blue mark {
   position: relative;
   overflow: hidden;
   color: unset !important;
@@ -20,7 +21,8 @@
 }
 
 .is-style-double-underline-animated mark::after,
-.is-style-underline-animated mark::after {
+.is-style-underline-animated mark::after,
+.is-style-double-underline-blue mark::after {
   content: "";
   position: absolute;
   left: 0;
@@ -40,8 +42,13 @@
   background-image: url("assets/images/underline-deco.svg");
 }
 
+.is-style-double-underline-blue mark::after {
+  background-image: url("assets/images/u-double-blue.svg");
+}
+
 .aos-animate.is-style-double-underline-animated mark::after,
-.aos-animate.is-style-underline-animated mark::after {
+.aos-animate.is-style-underline-animated mark::after,
+.is-style-double-underline-blue mark::after {
   animation: underlineAnim 2s ease 0s 1 normal forwards;
 }
 

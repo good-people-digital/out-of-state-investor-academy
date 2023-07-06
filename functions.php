@@ -89,8 +89,9 @@ function frost_register_block_styles() {
 			'outline' => __( 'Outline', 'frost' ),
 		),
 		'core/heading' => array(
-			'underline-animated' => __( 'Underline Animated', 'frost' ),
-			'double-underline-animated' => __( 'Double Underline Animated', 'frost' ),
+			'underline-animated' => __( 'Orange Underline', 'frost' ),
+			'double-underline-animated' => __( 'Yellow Double Underline', 'frost' ),
+			'double-underline-blue' => __( 'Blue Double Underline', 'frost' ),
 		),
 		'core/button' => array(
 			'color-outline' => __( 'Color Outline', 'frost' ),
