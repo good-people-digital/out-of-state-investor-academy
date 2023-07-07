@@ -73,13 +73,16 @@ textarea {
   background-color: var(--wp--preset--color--base);
   border: unset;
   border-radius: 40px;
-  color: var(--wp--preset--color--gray);
+  color: var(--wp--preset--color--contrast);
   font-family: var(--wp--preset--font-family--primary);
   font-size: var(--wp--preset--font-size--medium);
   font-weight: var(--wp--custom--font-weight--medium);
   line-height: var(--wp--custom--line-height--body);
   padding: 18px 24px;
   width: 100%;
+}
+label {
+  font-size: var(--wp--preset--font-size--medium);
 }
 
 input:focus,
