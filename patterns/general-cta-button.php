@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Call-to-action with text, button.
+ * Title: Register for summit.
  * Slug: frost/general-cta-button
  * Categories: call-to-action
  */
