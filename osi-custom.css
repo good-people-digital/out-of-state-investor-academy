@@ -13,13 +13,14 @@
 --------------------------------------------- */
 .is-style-double-underline-animated mark,
 .is-style-underline-animated mark,
-.is-style-double-underline-blue mark {
+.is-style-double-underline-blue mark,
+.is-style-underline-blue mark {
   position: relative;
   overflow: hidden;
   color: unset !important;
   background: unset !important;
 }
-
+.is-style-underline-blue mark::after,
 .is-style-double-underline-animated mark::after,
 .is-style-underline-animated mark::after,
 .is-style-double-underline-blue mark::after {
@@ -45,7 +46,10 @@
 .is-style-double-underline-blue mark::after {
   background-image: url("assets/images/u-double-blue.svg");
 }
-
+.is-style-underline-blue mark::after {
+  background-image: url("assets/images/u-blue.svg");
+}
+.aos-animate.is-style-underline-blue mark::after,
 .aos-animate.is-style-double-underline-animated mark::after,
 .aos-animate.is-style-underline-animated mark::after,
 .aos-animate.is-style-double-underline-blue mark::after {
@@ -326,6 +330,36 @@ form.inline-form input[type="submit"] {
   box-shadow: unset;
 }
 
+select {
+  appearance: none;
+}
+select:focus {
+  outline: none;
+  box-shadow: none;
+}
+.ginput_container.ginput_container_select {
+  position: relative;
+}
+.ginput_container.ginput_container_select::after {
+  content: "";
+  border: solid var(--wp--preset--color--gray);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  position: absolute;
+  right: 20px;
+  top: 24px;
+}
+.contact-form_wrapper input[type="submit"] {
+  background-color: transparent;
+  border: 4px solid var(--wp--preset--color--contrast);
+  color: var(--wp--preset--color--contrast);
+}
+textarea {
+  resize: none;
+}
 .white-background input[type="color"],
 .white-background input[type="date"],
 .white-background input[type="datetime-local"],
