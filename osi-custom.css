@@ -243,6 +243,73 @@
     transform: translateX(0px);
   }
 }
+/* Query Except Current Post
+--------------------------------------------- */
+ul.query-except-current-post {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.25em;
+  align-items: stretch;
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  max-width: 100%;
+  padding: 0;
+}
+ul.query-except-current-post li.custom-post-item {
+  margin-bottom: 0 !important;
+  min-height: 100%;
+  display: block;
+  min-height: 100%;
+  border-radius: 40px;
+  width: 100%;
+  background-color: var(--wp--preset--color--orange-3);
+  margin: 0;
+}
+
+@media (min-width: 600px) {
+  ul.query-except-current-post li.custom-post-item {
+    width: calc(33.33333% - 0.83333em);
+  }
+}
+
+ul.query-except-current-post figure.custom-post-thumbnail {
+  height: 240px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+ul.query-except-current-post figure.custom-post-thumbnail img {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  height: 240px;
+  object-fit: cover;
+  box-sizing: border-box;
+  max-width: 100%;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+ul.query-except-current-post div.custom-post-details {
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  padding-top: 32px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+  padding-left: 32px;
+}
+
+ul.query-except-current-post div.custom-post-date {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+ul.query-except-current-post .custom-post-title {
+  margin: 10px 0;
+}
 
 /* Query Block Style
 --------------------------------------------- */
@@ -258,18 +325,19 @@
   background-color: white;
 }
 
-.wp-block-query .wp-block-post-template li:nth-child(3n + 1) {
+.wp-block-query .wp-block-post-template li:nth-child(3n + 1),
+ul.query-except-current-post li.custom-post-item:nth-child(3n + 1) {
   background-color: var(--wp--preset--color--orange-3);
 }
 
-.wp-block-query .wp-block-post-template li:nth-child(3n + 2) {
-  transition-delay: 0.5s;
+.wp-block-query .wp-block-post-template li:nth-child(3n + 2),
+ul.query-except-current-post li.custom-post-item:nth-child(3n + 2) {
   background-color: var(--wp--preset--color--orange-2);
 }
 
-.wp-block-query .wp-block-post-template li:nth-child(3n + 3) {
+.wp-block-query .wp-block-post-template li:nth-child(3n + 3),
+ul.query-except-current-post li.custom-post-item:nth-child(3n + 3) {
   background-color: var(--wp--preset--color--primary);
-  transition-delay: 1s;
 }
 
 .wp-block-query .wp-block-post-template {
@@ -468,6 +536,15 @@ figure.wp-block-gallery figure.wp-block-image:nth-child(2) {
   bottom: 0;
   right: 50px;
   height: 100%;
+}
+
+.wp-block-post-content h1,
+.wp-block-post-content h2,
+.wp-block-post-content h3,
+.wp-block-post-content h4,
+.wp-block-post-content h5,
+.wp-block-post-content h5 {
+  color: #05324e;
 }
 
 /* FAQ Yoast Block Style 
