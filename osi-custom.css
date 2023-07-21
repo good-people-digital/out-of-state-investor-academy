@@ -538,15 +538,91 @@ figure.wp-block-gallery figure.wp-block-image:nth-child(2) {
   height: 100%;
 }
 
-.wp-block-post-content h1,
-.wp-block-post-content h2,
-.wp-block-post-content h3,
-.wp-block-post-content h4,
-.wp-block-post-content h5,
-.wp-block-post-content h5 {
+body.single .wp-block-post-content h1,
+body.single .wp-block-post-content h2,
+body.single .wp-block-post-content h3,
+body.single .wp-block-post-content h4,
+body.single .wp-block-post-content h5,
+body.single .wp-block-post-content h6 {
   color: #05324e;
 }
 
+/* <ul> List
+--------------------------------------------- */
+ul.is-style-custom-unorder-list {
+  list-style-type: none;
+  padding: 0;
+}
+ul.is-style-custom-unorder-list li {
+  padding-left: 35px;
+  position: relative;
+  margin-bottom: 16px;
+}
+ul.is-style-custom-unorder-list li::before {
+  content: "\f061";
+  font-family: "Font Awesome 6 Pro";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  padding: 8px;
+  background-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--secondary);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+/* <ol> List
+--------------------------------------------- */
+ol.is-style-custom-order-list {
+  list-style-type: none;
+  counter-reset: my-counter;
+  padding-left: 0;
+}
+
+ol.is-style-custom-order-list li {
+  position: relative;
+  counter-increment: my-counter;
+  padding-left: 35px;
+  margin-bottom: 16px;
+}
+
+ol.is-style-custom-order-list li:before {
+  content: counter(my-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px;
+  background-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--secondary);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+blockquote.wp-block-quote {
+  background: var(--wp--preset--color--neutral);
+  padding: 40px;
+  border-radius: 40px;
+  border: unset;
+  font-size: 18px;
+}
+
+.single .entry-content.wp-block-post-content a {
+  color: var(--wp--preset--color--secondary);
+  text-decoration: underline;
+}
 /* FAQ Yoast Block Style 
 --------------------------------------------- */
 
