@@ -97,6 +97,10 @@ function frost_register_block_styles() {
 		'core/button' => array(
 			'color-outline' => __( 'Color Outline', 'frost' ),
 		),
+		'core/list' => array(
+			'custom-order-list' => __( 'Custom Order List', 'frost' ),
+			'custom-unorder-list' => __( 'Custom Unorder List', 'frost' ),
+		),
 	);
 
 	foreach ( $block_styles as $block => $styles ) {
@@ -282,3 +286,24 @@ function exclude_current_post_shortcode( $atts ) {
     }
 }
 add_shortcode( 'exclude_current_post', 'exclude_current_post_shortcode' );
+
+/**
+ * Function to remove brackets from the end of the excerpt
+ *
+ * 
+ */
+function custom_trim_excerpt( $excerpt ) {
+    // Find the last occurrence of the closing bracket "]"
+    $last_bracket_pos = strrpos( $excerpt, ']' );
+
+    // Find the first occurrence of the opening bracket "["
+    $first_bracket_pos = strpos( $excerpt, '[' );
+
+    // If both brackets are found, remove everything between them, including the brackets themselves
+    if ( false !== $first_bracket_pos && false !== $last_bracket_pos ) {
+        $excerpt = substr_replace( $excerpt, '', $first_bracket_pos, $last_bracket_pos - $first_bracket_pos + 1 );
+    }
+
+    return $excerpt;
+}
+add_filter( 'get_the_excerpt', 'custom_trim_excerpt' );
