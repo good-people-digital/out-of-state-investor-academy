@@ -77,6 +77,8 @@ function frost_register_block_styles() {
 		),
 		'core/list' => array(
 			'no-disc' => __( 'No Disc', 'frost' ),
+      'custom-order-list' => __( 'Custom Order List', 'frost' ),
+			'custom-unorder-list' => __( 'Custom Unorder List', 'frost' ),
 		),
 		'core/navigation-link' => array(
 			'outline' => __( 'Outline', 'frost' ),
@@ -97,10 +99,7 @@ function frost_register_block_styles() {
 		'core/button' => array(
 			'color-outline' => __( 'Color Outline', 'frost' ),
 		),
-		'core/list' => array(
-			'custom-order-list' => __( 'Custom Order List', 'frost' ),
-			'custom-unorder-list' => __( 'Custom Unorder List', 'frost' ),
-		),
+
 	);
 
 	foreach ( $block_styles as $block => $styles ) {
