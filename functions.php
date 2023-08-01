@@ -73,10 +73,13 @@ function frost_register_block_styles() {
 			'shadow-solid' => __( 'Solid', 'frost' ),
 			'image-girl-animated' => __( 'Girl Img Animated', 'frost' ),
 			'yellow-decorations' => __( 'Yellow Decor', 'frost' ),
+      'yellow-light-decorations' => __( 'Yellow Light Decor', 'frost' ),
 			'blue-decorations' => __( 'Blue Decor', 'frost' ),
 		),
 		'core/list' => array(
 			'no-disc' => __( 'No Disc', 'frost' ),
+      'custom-order-list' => __( 'Custom Order List', 'frost' ),
+			'custom-unorder-list' => __( 'Custom Unorder List', 'frost' ),
 		),
 		'core/navigation-link' => array(
 			'outline' => __( 'Outline', 'frost' ),
@@ -97,10 +100,7 @@ function frost_register_block_styles() {
 		'core/button' => array(
 			'color-outline' => __( 'Color Outline', 'frost' ),
 		),
-		'core/list' => array(
-			'custom-order-list' => __( 'Custom Order List', 'frost' ),
-			'custom-unorder-list' => __( 'Custom Unorder List', 'frost' ),
-		),
+
 	);
 
 	foreach ( $block_styles as $block => $styles ) {

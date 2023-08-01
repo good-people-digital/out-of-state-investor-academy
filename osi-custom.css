@@ -19,6 +19,7 @@
   overflow: hidden;
   color: unset !important;
   background: unset !important;
+  z-index: 3;
 }
 .is-style-underline-blue mark::after,
 .is-style-double-underline-animated mark::after,
@@ -33,6 +34,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
+  z-index: -1;
 }
 
 .is-style-double-underline-animated mark::after {
@@ -156,15 +158,23 @@
 --------------------------------------------- */
 
 .aos-animate.is-style-yellow-decorations,
-.aos-animate.is-style-blue-decorations {
+.aos-animate.is-style-blue-decorations,
+.aos-animate.is-style-yellow-light-decorations {
   border-radius: 40px;
   padding-bottom: 7%;
   position: relative;
   max-width: 495px;
   animation-delay: 1s;
+  margin-top: 7%;
+}
+.aos-animate.is-style-yellow-light-decorations {
+  padding-bottom: 4%;
 }
 .aos-animate.is-style-yellow-decorations {
   animation: fadeBkgBlue 1s forwards;
+}
+.aos-animate.is-style-yellow-light-decorations {
+  animation: fadeBkgLightYellow 1s forwards;
 }
 .aos-animate.is-style-blue-decorations {
   animation: fadeBkgYellow 1s forwards;
@@ -177,7 +187,15 @@
   border-radius: 40px;
   width: 98%;
 }
-
+.is-style-yellow-light-decorations img {
+  margin-top: -4%;
+  margin-left: 5%;
+  border-radius: 40px;
+  max-width: 98%;
+  width: 495px;
+  height: 296px;
+  object-fit: cover;
+}
 .is-style-yellow-decorations::after,
 .is-style-yellow-decorations::before {
   content: "";
@@ -191,8 +209,16 @@
   background-color: var(--wp--preset--color--blue-2);
 }
 
+.is-style-yellow-light-decorations::after,
+.is-style-yellow-light-decorations::before {
+  content: "";
+  position: absolute;
+  background-color: var(--wp--preset--color--blue-2);
+}
+
 .aos-animate.is-style-yellow-decorations::before,
-.aos-animate.is-style-blue-decorations::before {
+.aos-animate.is-style-blue-decorations::before,
+.aos-animate.is-style-yellow-light-decorations::before {
   display: block;
   width: 4%;
   height: 4%;
@@ -203,7 +229,8 @@
 }
 
 .aos-animate.is-style-yellow-decorations::after,
-.aos-animate.is-style-blue-decorations::after {
+.aos-animate.is-style-blue-decorations::after,
+.aos-animate.is-style-yellow-light-decorations::after {
   display: block;
   width: 40%;
   height: 4%;
@@ -223,7 +250,14 @@
     background-color: var(--wp--preset--color--primary);
   }
 }
-
+@keyframes fadeBkgLightYellow {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: var(--wp--preset--color--orange-2);
+  }
+}
 @keyframes fadeBkgBlue {
   from {
     background-color: transparent;
@@ -360,6 +394,10 @@ input[type="submit"] {
   letter-spacing: 1.28px;
   width: auto;
   margin: 0 auto;
+}
+input[type="submit"]:hover {
+  background-color: #e49407;
+  border-color: #e49407;
 }
 
 form.inline-form {
@@ -707,4 +745,28 @@ blockquote.wp-block-quote {
   padding: 22px 24px;
   border: 4px solid var(--wp--preset--color--contrast);
   border-radius: 40px;
+}
+
+@media only screen and (max-width: 599px) {
+  .wp-block-button,
+  input[type="submit"] {
+    width: 100%;
+  }
+  .wp-block-button .wp-block-button__link {
+    width: inherit;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .margin-top-minus-65 {
+    margin-top: -65px !important;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 781px) {
+  .columns-2-tablet:not(.is-not-stacked-on-mobile) > .wp-block-column {
+    flex-basis: 47% !important;
+  }
+  footer input[type="submit"] {
+    width: 100%;
+  }
 }
