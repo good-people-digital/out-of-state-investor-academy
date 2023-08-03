@@ -309,3 +309,54 @@ function custom_trim_excerpt( $excerpt ) {
 }
 add_filter( 'get_the_excerpt', 'custom_trim_excerpt' );
 
+// Shortcode to display the video URL from ACF
+function single_summit_video_shortcode() {
+    // Get the video URL using the ACF function get_field()
+    if (get_field('video')) {
+        ob_start(); // Start output buffering
+
+        ?>
+        <div class="video-container">
+            <?php
+
+            // Load value.
+            $iframe = get_field('video');
+
+            // Use preg_match to find iframe src.
+            preg_match('/src="(.+?)"/', $iframe, $matches);
+            $src = $matches[1];
+
+            // Add extra parameters to src and replace HTML.
+            $params = array(
+                'controls'  => 1,
+                'hd'        => 1,
+                'autohide'  => 1
+            );
+            $new_src = add_query_arg($params, $src);
+            $iframe = str_replace($src, $new_src, $iframe);
+
+            // Add extra attributes to iframe HTML.
+            $attributes = 'frameborder="0"';
+            $iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+
+            if ($iframe) {
+                ?>
+                <div class="plyr__video-embed" id="player"><?php echo $iframe; ?></div>
+                <?php
+            } else {
+                ?>
+                <figure><?php echo get_the_post_thumbnail(); ?></figure>
+                <?php
+            }
+
+            ?>
+        </div>
+        <?php
+
+        // Get the buffered content and clean the buffer
+        $output = ob_get_clean();
+
+        return $output;
+    }
+}
+add_shortcode('single_summit_video', 'single_summit_video_shortcode');
