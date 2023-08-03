@@ -309,29 +309,3 @@ function custom_trim_excerpt( $excerpt ) {
 }
 add_filter( 'get_the_excerpt', 'custom_trim_excerpt' );
 
-
-function event_information_shortcode( $atts ) {
-    $atts = shortcode_atts( array(
-        'post_id' => get_the_ID(), // Default to current post ID if not provided in the shortcode
-    ), $atts, 'event_information' );
-
-    // Get event meta data
-    $event_date = get_post_meta( $atts['post_id'], '_EventStartDate', true );
-    $event_location = get_post_meta( $atts['post_id'], '_EventVenueName', true );
-    $event_organizer = get_post_meta( $atts['post_id'], '_EventOrganizerName', true );
-
-    // Return the event information in HTML format
-    ob_start(); ?>
-    <div>
-      <strong>Event Date:</strong> <?php echo $event_date; ?>
-    </div>
-    <div>
-      <strong>Event Location:</strong> <?php echo $event_location; ?>
-    </div>
-    <div>
-      <strong>Event Organizer:</strong> <?php echo $event_organizer; ?>
-    </div>
-    <?php
-    return ob_get_clean();
-}
-add_shortcode( 'event_information', 'event_information_shortcode' );
