@@ -244,10 +244,11 @@ function exclude_current_post_shortcode( $atts ) {
 
     $atts = shortcode_atts( array(
         'posts_per_page' => 5,
+        'post_type'      => 'post',
     ), $atts, 'exclude_current_post' );
 
     $query_args = array(
-        'post_type'      => 'post',
+        'post_type'      => $atts['post_type'],
         'posts_per_page' => absint( $atts['posts_per_page'] ),
         'post__not_in'   => array( $current_post_id ),
     );
@@ -307,3 +308,30 @@ function custom_trim_excerpt( $excerpt ) {
     return $excerpt;
 }
 add_filter( 'get_the_excerpt', 'custom_trim_excerpt' );
+
+
+function event_information_shortcode( $atts ) {
+    $atts = shortcode_atts( array(
+        'post_id' => get_the_ID(), // Default to current post ID if not provided in the shortcode
+    ), $atts, 'event_information' );
+
+    // Get event meta data
+    $event_date = get_post_meta( $atts['post_id'], '_EventStartDate', true );
+    $event_location = get_post_meta( $atts['post_id'], '_EventVenueName', true );
+    $event_organizer = get_post_meta( $atts['post_id'], '_EventOrganizerName', true );
+
+    // Return the event information in HTML format
+    ob_start(); ?>
+    <div>
+      <strong>Event Date:</strong> <?php echo $event_date; ?>
+    </div>
+    <div>
+      <strong>Event Location:</strong> <?php echo $event_location; ?>
+    </div>
+    <div>
+      <strong>Event Organizer:</strong> <?php echo $event_organizer; ?>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+add_shortcode( 'event_information', 'event_information_shortcode' );

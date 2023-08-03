@@ -576,12 +576,12 @@ figure.wp-block-gallery figure.wp-block-image:nth-child(2) {
   height: 100%;
 }
 
-body.single .wp-block-post-content h1,
-body.single .wp-block-post-content h2,
-body.single .wp-block-post-content h3,
-body.single .wp-block-post-content h4,
-body.single .wp-block-post-content h5,
-body.single .wp-block-post-content h6 {
+body.single:not(.single-tribe_events) .wp-block-post-content h1,
+body.single:not(.single-tribe_events) .wp-block-post-content h2,
+body.single:not(.single-tribe_events) .wp-block-post-content h3,
+body.single:not(.single-tribe_events) .wp-block-post-content h4,
+body.single:not(.single-tribe_events) .wp-block-post-content h5,
+body.single:not(.single-tribe_events) .wp-block-post-content h6 {
   color: #05324e;
 }
 
@@ -746,11 +746,184 @@ blockquote.wp-block-quote {
   border: 4px solid var(--wp--preset--color--contrast);
   border-radius: 40px;
 }
+
 .wp-block-navigation__responsive-container-open,
 .wp-block-navigation__responsive-container-close {
   border: unset;
   color: var(--wp--preset--color--secondary);
 }
+
+/* Single Even Template
+--------------------------------------------- */
+#event-content .wp-block-image {
+  display: flex;
+}
+
+.single-tribe_events .wp-block-post-content p {
+  font-size: 20px;
+  max-width: 880px;
+}
+
+.single-tribe_events
+  .tribe-events
+  .tribe-events-c-subscribe-dropdown__container,
+.tribe-block__events-link
+  .tribe-events
+  .tribe-events-c-subscribe-dropdown__container {
+  width: auto;
+}
+
+.tribe-common-c-btn-border.tribe-events-c-subscribe-dropdown__button,
+.tribe-common
+  .tribe-events-c-subscribe-dropdown
+  .tribe-events-c-subscribe-dropdown__button {
+  border-radius: 40px;
+  border: 4px solid var(--wp--preset--color--contrast);
+  color: var(--wp--preset--color--contrast);
+  width: auto;
+  text-transform: uppercase;
+  padding: 22px 24px;
+}
+
+.tribe-common-c-btn-border.tribe-events-c-subscribe-dropdown__button svg,
+.tribe-common
+  .tribe-events-c-subscribe-dropdown
+  .tribe-events-c-subscribe-dropdown__button
+  svg {
+  display: none;
+}
+
+.tribe-common-c-btn-border.tribe-events-c-subscribe-dropdown__button:hover,
+.tribe-common-c-btn-border.tribe-events-c-subscribe-dropdown__button:focus,
+.tribe-common-c-btn-border.tribe-events-c-subscribe-dropdown__button:focus-within,
+.tribe-common-c-btn-border.tribe-events-c-subscribe-dropdown__button:active {
+  background-color: var(--wp--preset--color--primary) !important;
+  color: var(--wp--preset--color--contrast) !important;
+}
+
+.tribe-block.tribe-block__events-link {
+  margin: 0;
+  padding: 0;
+}
+
+h2.tribe-events-schedule__datetime {
+  font-family: var(--wp--preset--font-family--primary);
+}
+
+.tribe-events-schedule__datetime span {
+  font-size: 20px;
+  color: var(--wp--preset--color--contrast);
+  font-weight: 500;
+}
+
+div.tribe-events-event-image img {
+  border-radius: 40px;
+}
+
+.tribe-block__organizer__details,
+.tribe-block__venue {
+  border-color: var(--wp--preset--color--gray);
+}
+
+.tribe-events-c-top-bar__datepicker button.tribe-common-h3 {
+  font-size: 24px !important;
+  font-weight: 800;
+  color: var(--wp--preset--color--contrast);
+}
+
+.tribe-events
+  .tribe-events-calendar-list__event-date-tag
+  .tribe-events-calendar-list__event-date-tag-datetime {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+
+.tribe-common
+  .tribe-events-calendar-list__event-date-tag-datetime
+  .tribe-events-calendar-list__event-date-tag-daynum {
+  color: var(--wp--preset--color--gray);
+  font-weight: 800;
+  font-size: 28px;
+}
+
+.tribe-common
+  .tribe-events-calendar-list__event-date-tag-datetime
+  .tribe-events-calendar-list__event-date-tag-weekday {
+  color: var(--wp--preset--color--contrast);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tribe-events-calendar-list__event-details
+  header.tribe-events-calendar-list__event-header
+  .tribe-events-calendar-list__event-datetime-wrapper,
+.tribe-events-calendar-list__event-details
+  header.tribe-events-calendar-list__event-header
+  .tribe-events-calendar-list__event-venue {
+  font-size: var(--wp-preset--font-size--large);
+}
+
+.tribe-events-calendar-list__event-details
+  .tribe-events-calendar-list__event-description {
+  font-size: 16px;
+}
+
+.tribe-events-calendar-list__event-details
+  header.tribe-events-calendar-list__event-header
+  .tribe-events-calendar-list__event-title {
+  font-size: var(--wp--preset--font-size--max-28);
+}
+
+.tribe-events-calendar-list__event-featured-image-wrapper img {
+  border-radius: 40px;
+}
+
+ul.tribe-events-c-nav__list
+  .tribe-events-c-nav__list-item
+  a:not(.tribe-events-c-nav__today),
+ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button {
+  border-radius: 40px;
+  border: 4px solid var(--wp--preset--color--contrast);
+  color: var(--wp--preset--color--contrast) !important;
+  width: auto !important;
+  text-transform: uppercase;
+  padding: 22px 24px;
+  font-weight: 800;
+}
+ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item svg {
+  display: none;
+}
+ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
+  border: 4px solid var(--wp--preset--color--gray-3) !important;
+  color: var(--wp--preset--color--gray-3) !important;
+  border-radius: 40px;
+  width: auto !important;
+  text-transform: uppercase;
+  padding: 22px 24px;
+  font-weight: 800;
+}
+.tribe-events-c-subscribe-dropdown__button-text {
+  text-transform: uppercase;
+  font-weight: 800 !important;
+}
+.tribe-events .tribe-events-c-nav__list-item {
+  width: auto !important;
+}
+.tribe-events .tribe-events-c-nav__list-item--today {
+  align-items: center;
+}
+.tribe-events .tribe-events-c-nav__list-item--today a {
+  font-weight: 800 !important;
+  color: var(--wp--preset--color--contrast);
+}
+
+.tribe-events-calendar-list__event-datetime-featured-text,
+.tribe-events-calendar-list__event-datetime-featured-icon {
+  display: none !important;
+}
+
+/* Media Queries
+--------------------------------------------- */
 @media only screen and (max-width: 599px) {
   .wp-block-button,
   input[type="submit"] {
@@ -763,6 +936,7 @@ blockquote.wp-block-quote {
     flex-wrap: nowrap !important;
   }
 }
+
 @media only screen and (min-width: 600px) {
   .margin-top-minus-65 {
     margin-top: -65px !important;
@@ -800,10 +974,22 @@ blockquote.wp-block-quote {
   .justify-center {
     justify-content: center;
   }
+  .single-tribe_events .tribe-events-schedule {
+    border: unset;
+    background-color: unset;
+  }
 }
+
 @media only screen and (min-width: 786px) {
   #watch-this .wp-block-image {
     margin-bottom: -103px;
     margin-left: -90px;
+  }
+  div.tribe-events-event-image {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
