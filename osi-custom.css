@@ -608,7 +608,7 @@ ul.is-style-custom-unorder-list li::before {
   border-radius: 50%;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 4px;
   width: 28px;
   height: 28px;
   align-items: center;
@@ -934,7 +934,13 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
 .video-container {
   position: relative;
 }
-
+.tribe-events-c-subscribe-dropdown__container
+  .tribe-events-c-subscribe-dropdown {
+  margin: 0 auto !important;
+}
+.tribe-events-calendar-list-nav {
+  display: none !important;
+}
 @media only screen and (max-width: 600px) {
   .video-container iframe,
   .video-container iframe .player {
