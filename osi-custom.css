@@ -941,6 +941,14 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
 .tribe-events-calendar-list-nav {
   display: none !important;
 }
+
+.object-position-top img {
+  object-position: top;
+}
+.single-tribe_events .wp-block-image img {
+  border-radius: 40px;
+}
+
 @media only screen and (max-width: 600px) {
   .video-container iframe,
   .video-container iframe .player {
