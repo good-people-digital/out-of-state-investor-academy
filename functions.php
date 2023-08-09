@@ -96,9 +96,12 @@ function frost_register_block_styles() {
 			'underline-blue' => __( 'Blue Underline', 'frost' ),
 			'double-underline-animated' => __( 'Yellow Double Underline', 'frost' ),
 			'double-underline-blue' => __( 'Blue Double Underline', 'frost' ),
+      'dark-underline' => __( 'Dark Underline', 'frost' ),
+      'blue-long-underline' => __( 'Blue Long Underline', 'frost' ),
 		),
 		'core/button' => array(
 			'color-outline' => __( 'Color Outline', 'frost' ),
+      'sparkle-decor' => __( 'Sparkle Decor', 'frost' ),
 		),
 
 	);
