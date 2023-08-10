@@ -93,6 +93,7 @@ function frost_register_block_styles() {
 		),
 		'core/heading' => array(
 			'underline-animated' => __( 'Orange Underline', 'frost' ),
+      'orange-short-underline' => __( 'Orange Short Underline', 'frost' ),
 			'underline-blue' => __( 'Blue Underline', 'frost' ),
 			'double-underline-animated' => __( 'Yellow Double Underline', 'frost' ),
 			'double-underline-blue' => __( 'Blue Double Underline', 'frost' ),

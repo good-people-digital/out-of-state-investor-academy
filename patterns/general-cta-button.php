@@ -5,7 +5,7 @@
  * Categories: call-to-action
  */
 ?>
-<!-- wp:group {"animationsForBlocks":{"animation":"","variation":"fade","mirror":true,"once":false},"align":"full","style":{"spacing":{"padding":{"top":"80px","bottom":"80px"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"Blue2","layout":{"type":"constrained"}} -->
+<!-- wp:group {"animationsForBlocks":{"animation":"","variation":"fade","mirror":true,"once":false},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","right":"var:preset|spacing|x-small","left":"var:preset|spacing|x-small"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"Blue2","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-blue-2-background-color has-background" id="register-summit" style="margin-top:0;margin-bottom:0;padding-top:80px;padding-bottom:80px"><!-- wp:columns {"align":"wide"} -->
 <div class="wp-block-columns alignwide"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:group {"layout":{"type":"constrained","contentSize":"666px"}} -->
