@@ -3,7 +3,7 @@
 /build
 /vendor
 node_modules
-/theme.json
+
 /assets/css
 ### VisualStudioCode ###
 .vscode/*

@@ -889,6 +889,10 @@ div.tribe-events-event-image img {
   font-weight: 500;
 }
 
+.tribe-common .tribe-events-calendar-list img {
+    max-width: 65%;
+}
+
 .tribe-events-calendar-list__event-details
   header.tribe-events-calendar-list__event-header
   .tribe-events-calendar-list__event-datetime-wrapper,
@@ -987,6 +991,7 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
 .text-shadow {
   text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
 }
+
 @media only screen and (max-width: 600px) {
   .video-container iframe,
   .video-container iframe .player {
@@ -1003,6 +1008,10 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
   .video-container iframe,
   .video-container iframe .player {
     height: 573px;
+  }
+  #contain-hero-summit .wp-block-column#overlap {
+    margin-right: -100px;
+    z-index: 5;
   }
 }
 
