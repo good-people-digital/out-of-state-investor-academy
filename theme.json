@@ -144,7 +144,7 @@
 				"one": 1
 			},
 			"spacing": {
-				"gap": "30px"
+				"gap": "24px"
 			}
 		},
 		"layout": {
@@ -175,7 +175,7 @@
 				},
 				{
 					"name": "Small",
-					"size": "clamp(30px, 4vw, 40px)",
+					"size": "clamp(24px, 4vw, 40px)",
 					"slug": "small"
 				},
 				{
@@ -319,7 +319,7 @@
 				},
 				{
 					"fluid": {
-						"min": "46px",
+						"min": "36px",
 						"max": "56px"
 					},
 					"name": "56px",
