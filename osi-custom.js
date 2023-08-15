@@ -1,24 +1,10 @@
-// jQuery(document).ready(function ($) {
-//   // Css Animation on scroll
-//   $(".scroll-animate").each(function () {
-//     var section = $(this);
-//     var element = section.find(
-//       ".is-style-double-underline-animated, .is-style-underline-animated"
-//     );
+jQuery(document).ready(function ($) {
+  $(".wp-block-query .wp-block-post").each(function () {
+    var $post = $(this);
+    var $link = $post.find("a");
+    var linkHref = $link.attr("href");
 
-//     $(window).scroll(function () {
-//       var elementPosition = element.offset()?.top;
-//       if (elementPosition === undefined) return;
-
-//       var triggerPosition = $(window).height() * 0.1;
-//       var scrollPosition = $(window).scrollTop();
-//       var windowHeight = $(window).height();
-
-//       if (scrollPosition + windowHeight > elementPosition + triggerPosition) {
-//         element.addClass("animate");
-//       } else {
-//         element.removeClass("animate");
-//       }
-//     });
-//   });
-// });
+    // Wrap the existing content of .wp-block-post with the link
+    $post.contents().wrapAll('<a href="' + linkHref + '" target="_self"></a>');
+  });
+});

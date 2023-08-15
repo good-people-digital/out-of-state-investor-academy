@@ -330,6 +330,15 @@ ul.query-except-current-post li.custom-post-item {
   margin: 0;
 }
 
+ul.query-except-current-post li.custom-post-item a {
+  display: block;
+  height: 100%;
+}
+
+ul.query-except-current-post li.custom-post-item p:empty {
+  display: none;
+}
+
 ul.query-except-current-post figure.custom-post-thumbnail {
   height: 240px;
   margin-top: 0;
@@ -365,6 +374,7 @@ ul.query-except-current-post div.custom-post-date {
 
 ul.query-except-current-post .custom-post-title {
   margin: 10px 0;
+  color: var(--wp--preset--color--contrast);
 }
 
 /* Query Block Style
@@ -398,7 +408,7 @@ ul.query-except-current-post li.custom-post-item:nth-child(3n + 3) {
 
 .wp-block-query .wp-block-post-template {
   align-items: stretch;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 /* Button Variations
@@ -1002,7 +1012,9 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
     rgb(234, 237, 243) 100%
   );
 }
-
+.pum-container.pum-responsive .wp-block-cover img {
+  height: 100%;
+}
 /* Media Queries
 --------------------------------------------- */
 
@@ -1012,6 +1024,9 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
   ul.query-except-current-post li.custom-post-item img,
   ul.query-except-current-post li.custom-post-item figure {
     height: 180px !important;
+  }
+  figure.wp-block-image.free-course-img {
+    margin-right: 10px !important;
   }
 }
 @media only screen and (max-width: 599px) {
@@ -1029,12 +1044,24 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
   .video-container iframe .player {
     height: 253px;
   }
+
+  figure.aos-animate.is-style-yellow-light-decorations {
+    margin-right: 10px !important;
+  }
+  figure.aos-animate.is-style-yellow-decorations:not(.free-course-img),
+  figure.aos-animate.is-style-blue-decorations:not(.free-course-img) {
+    margin-right: 20px !important;
+  }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 980px) {
   .video-container iframe,
   .video-container iframe .player {
     height: 473px;
+  }
+  .tablet-width-80 {
+    max-width: 80%;
+    margin: 0 auto;
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 786px) {
