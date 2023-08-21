@@ -408,7 +408,7 @@ ul.query-except-current-post li.custom-post-item:nth-child(3n + 3) {
 
 .wp-block-query .wp-block-post-template {
   align-items: stretch;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 /* Button Variations
