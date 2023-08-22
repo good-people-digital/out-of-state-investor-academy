@@ -1012,9 +1012,11 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
     rgb(234, 237, 243) 100%
   );
 }
+
 .pum-container.pum-responsive .wp-block-cover img {
   height: 100%;
 }
+
 /* Media Queries
 --------------------------------------------- */
 
@@ -1025,10 +1027,17 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
   ul.query-except-current-post li.custom-post-item figure {
     height: 180px !important;
   }
+
   figure.wp-block-image.free-course-img {
     margin-right: 10px !important;
   }
+
+  #affiliate-osi div#titles .wp-block-column,
+  #affiliate-osi div#content .wp-block-column {
+    padding: 20px 10px !important;
+  }
 }
+
 @media only screen and (max-width: 599px) {
   .wp-block-button,
   input[type="submit"] {
@@ -1064,6 +1073,7 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
     margin: 0 auto;
   }
 }
+
 @media only screen and (min-width: 600px) and (max-width: 786px) {
   .columns-2-tablet:not(.is-not-stacked-on-mobile) > .wp-block-column {
     flex-basis: 47% !important;
@@ -1099,7 +1109,7 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
   }
 }
 
-@media only screen and (max-width: 786px) {
+@media only screen and (max-width: 781px) {
   #watch-this {
     flex-direction: row-reverse;
     justify-content: center;
@@ -1131,9 +1141,27 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
     border: unset;
     background-color: unset;
   }
+
+  /* Affiliate table
+--------------------------------------------- */
+  #flex {
+    display: flex;
+  }
+  #affiliate-osi div#titles {
+    width: 55%;
+  }
+  #affiliate-osi div#content {
+    width: 40%;
+    margin-top: 0;
+  }
+  #affiliate-osi div#content .wp-block-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-@media only screen and (min-width: 786px) {
+@media only screen and (min-width: 782px) {
   #watch-this .wp-block-image {
     margin-bottom: -103px;
     margin-left: -90px;
@@ -1150,6 +1178,10 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
   .wp-block-post-template.is-flex-container.is-flex-container.columns-3 > li,
   ul.query-except-current-post li.custom-post-item {
     width: calc(33.33333% - 0.83333em);
+  }
+
+  .hide-on-large {
+    display: none !important;
   }
 }
 
