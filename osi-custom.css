@@ -1017,6 +1017,12 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
   height: 100%;
 }
 
+.height-100 {
+  height: 100%;
+}
+.flex-grow-1 {
+  flex-grow: 1;
+}
 /* Media Queries
 --------------------------------------------- */
 
