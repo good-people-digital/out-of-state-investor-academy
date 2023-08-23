@@ -52,6 +52,17 @@ function frost_enqueue_style_sheet() {
 
 }
 
+
+function include_slick_carousel() {
+  // Enqueue Slick Carousel CSS
+  wp_enqueue_style( 'slick-carousel', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' );
+  wp_enqueue_style( 'slick-carousel-theme', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css' );
+
+  // Enqueue Slick Carousel JS
+  wp_enqueue_script( 'jquery' ); // Make sure jQuery is loaded first
+  wp_enqueue_script( 'slick-carousel', get_template_directory_uri() . '/assets/slick.min.js', array( 'jquery' ), '1.8.1', true );
+}
+add_action( 'wp_enqueue_scripts', 'include_slick_carousel' );
 /**
  * Register block styles.
  *
