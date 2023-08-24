@@ -113,7 +113,8 @@ function frost_register_block_styles() {
 		),
 		'core/button' => array(
 			'color-outline' => __( 'Color Outline', 'frost' ),
-      'sparkle-decor' => __( 'Sparkle Decor', 'frost' ),
+      'sparkle-decor' => __( 'White Sparkle Decor', 'frost' ),
+      'orange-sparkle-decor' => __( 'Orange Sparkle Decor', 'frost' ),
 		),
 
 	);
