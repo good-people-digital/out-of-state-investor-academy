@@ -1080,6 +1080,16 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
   content: unset;
 }
 
+.position-relative {
+  position: relative;
+}
+
+#arrow-right-deco {
+  position: absolute;
+  bottom: -30px;
+  z-index: 4;
+}
+
 /* Media Queries
 --------------------------------------------- */
 
