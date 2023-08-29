@@ -26,10 +26,6 @@ Frost is distributed under the terms of the GNU GPL.
   box-sizing: border-box;
 }
 
-body {
-  background-color: red;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -223,5 +219,15 @@ textarea {
 
   .is-style-columns-reverse {
     flex-direction: column-reverse;
+  }
+
+  .home #blog-post #arrow-right-deco {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 782px) and (max-width: 1110px) {
+  #arrow-right-deco {
+    bottom: 0 !important;
   }
 }

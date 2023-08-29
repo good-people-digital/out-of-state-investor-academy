@@ -16,6 +16,11 @@ mark {
   background: unset;
 }
 
+.no-pointer a {
+  cursor: none;
+  pointer-events: none;
+}
+
 .is-style-double-underline-animated mark,
 .is-style-underline-animated mark,
 .is-style-double-underline-blue mark,
@@ -1101,9 +1106,9 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
     height: 180px !important;
   }
 
-  figure.wp-block-image.free-course-img {
+  /* figure.wp-block-image.free-course-img {
     margin-right: 10px !important;
-  }
+  } */
 
   #affiliate-osi div#titles,
   #affiliate-osi div#content {
@@ -1112,6 +1117,27 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
 }
 
 @media only screen and (max-width: 599px) {
+  .our-story-banner.wp-block-cover .wp-block-cover__image-background {
+    top: 27%;
+    z-index: 0;
+  }
+  .pos-relative {
+    position: relative;
+  }
+
+  .cover-academy.wp-block-cover .wp-block-cover__image-background {
+    top: 37%;
+    z-index: 0;
+  }
+
+  .wp-block-cover.boots-section .wp-block-cover__image-background {
+    left: 20%;
+    top: 23%;
+  }
+
+  .section-comm-orange.wp-block-cover .wp-block-cover__image-background {
+    left: 35%;
+  }
   .wp-block-button,
   input[type="submit"] {
     width: 100%;
@@ -1183,6 +1209,14 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
 }
 
 @media only screen and (max-width: 781px) {
+  figure.wp-block-image.free-course-img {
+    margin-right: auto !important;
+  }
+
+  .free-course-img.aos-animate.is-style-yellow-decorations {
+    max-width: 240px;
+  }
+
   #watch-this {
     flex-direction: row-reverse;
     justify-content: center;
@@ -1263,6 +1297,39 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
 
   .hide-on-large {
     display: none !important;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 781px) {
+  .our-story-banner.wp-block-cover .wp-block-cover__image-background {
+    object-position: 87% 50% !important;
+    z-index: 0;
+    top: 15%;
+  }
+
+  .wp-block-cover.cover-academy .wp-block-cover__image-background {
+    top: 10%;
+  }
+
+  .no-medium-gap.wp-block-columns {
+    gap: 0 !important;
+  }
+
+  .no-medium-padd.wp-block-column {
+    padding-bottom: 0 !important;
+  }
+
+  .boots-section.wp-block-cover .wp-block-cover__image-background {
+    left: 30%;
+    top: 19%;
+  }
+
+  .section-comm-orange.wp-block-cover .wp-block-cover__image-background {
+    left: 24%;
+  }
+
+  .pos-relative {
+    position: relative;
   }
 }
 
