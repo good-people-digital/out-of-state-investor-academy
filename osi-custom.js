@@ -47,4 +47,86 @@ jQuery(document).ready(function ($) {
     nextArrow:
       '<button type="button" class="slick-next">' + svgArrowNext + "</button>",
   });
+
+  var dynamicTextElement = $("#dynamic-text");
+  var originalText = dynamicTextElement.text();
+  
+  var words = originalText.split(" ");
+  var currentIndex = words.indexOf("by");
+  
+  function rotateWords() {
+      words[currentIndex] = "for";
+      dynamicTextElement.text(words.join(" "));
+      
+      currentIndex = (currentIndex + 1) % words.length;
+      if (words[currentIndex] !== "by") {
+          currentIndex = words.indexOf("by");
+      }
+  }
+  
+  var dynamicTextElement = $("#dynamic-text");
+        var originalText = dynamicTextElement.text();
+        
+        var words = originalText.split(" ");
+        var currentIndex = words.indexOf("by");
+        
+        function rotateWords() {
+            dynamicTextElement.animate({ opacity: 0, marginTop: "-20px" }, 100, function() {
+                words[currentIndex] = "for";
+                dynamicTextElement.text(words.join(" "));
+                currentIndex = (currentIndex + 1) % words.length;
+                if (words[currentIndex] !== "by") {
+                    currentIndex = words.indexOf("by");
+                }
+
+                dynamicTextElement.css({ opacity: 1, marginTop: 0 });
+            });
+        }
+
+        var rotationInterval;
+
+        function startRotation() {
+            rotationInterval = setInterval(function() {
+                rotateWords();
+            }, 3000); // 3000 milliseconds = 3 seconds
+        }
+
+        function stopRotation() {
+            clearInterval(rotationInterval);
+        }
+
+        var section = $(".word-switch");
+        var sectionTop = section.offset().top;
+        var sectionHeight = section.height();
+        var windowHeight = $(window).height();
+
+        $(window).on("scroll", function() {
+            var scrollTop = $(this).scrollTop();
+
+            if (scrollTop > sectionTop - windowHeight && scrollTop < sectionTop + sectionHeight) {
+                if (!rotationInterval) {
+                    startRotation();
+                }
+            } else {
+                stopRotation();
+            }
+        });
+
+
+        var dynamicTextElement = $("#new-text");
+        var originalText = dynamicTextElement.text();
+        
+        var words = originalText.split(" ");
+        var currentIndex = words.indexOf("BY");
+        
+        function rotateWords() {
+            words[currentIndex] = "FOR";
+            dynamicTextElement.text(words.join(" "));
+            currentIndex = (currentIndex + 1) % words.length;
+            if (words[currentIndex] !== "BY") {
+                currentIndex = words.indexOf("BY");
+            }
+        }
+
+        setInterval(rotateWords, 3000); // Rotate every 3 seconds
 });

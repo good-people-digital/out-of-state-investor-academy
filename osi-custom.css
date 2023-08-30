@@ -436,6 +436,25 @@ ul.query-except-current-post li.custom-post-item:nth-child(3n + 3) {
   opacity: 1;
 }
 
+.banner-yellow.wp-block-group {
+  position: absolute;
+  max-width: 398px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -29px);
+  width: 100%;
+}
+
+.max-270.wp-block-group {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pos-relative {
+  position: relative;
+}
+
 /* Button Variations
 --------------------------------------------- */
 .is-style-outline mark {
@@ -1117,6 +1136,12 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
 }
 
 @media only screen and (max-width: 599px) {
+
+  .course-academy.wp-block-cover .wp-block-cover__image-background {
+    left: 10%;
+    top: 50%;
+  }
+
   .our-story-banner.wp-block-cover .wp-block-cover__image-background {
     top: 27%;
     z-index: 0;
@@ -1161,6 +1186,8 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
     margin-right: 20px !important;
   }
 }
+
+
 
 @media only screen and (min-width: 600px) and (max-width: 980px) {
   .video-container iframe,
@@ -1306,6 +1333,12 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
     z-index: 0;
     top: 15%;
   }
+
+  .course-academy.wp-block-cover .wp-block-cover__image-background {
+    left: 22%;
+    top: 20%;
+    z-index: 0;
+  } 
 
   .wp-block-cover.cover-academy .wp-block-cover__image-background {
     top: 10%;
