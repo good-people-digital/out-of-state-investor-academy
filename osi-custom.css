@@ -595,6 +595,10 @@ textarea {
   border: 1px solid var(--wp--preset--color--contrast);
 }
 
+body .is-layout-flex.wp-block-columns.price-box {
+  gap: 60px;
+}
+
 @media only screen and (min-width: 1024px) {
   .flex-row .gfield_radio,
   .flex-row .gfield_radio .gchoice {
