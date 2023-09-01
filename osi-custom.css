@@ -16,6 +16,86 @@ mark {
   background: unset;
 }
 
+/* Vertical Flip */
+.sentence  {
+  display: flex;
+  justify-content: center;
+}
+/* Vertical Flip */
+.sentence.home .verticalFlip {
+  text-indent: 8px;
+  width: 75px;
+}
+.verticalFlip {
+  display: inline;
+  text-indent: 4px;
+  position: relative;
+  width: 130px;
+  text-align: center;
+  margin-right: 6px; /* Adjust the margin-bottom value as needed */
+}
+
+.sentence.home .verticalFlip span {
+  color: #fff;
+}
+
+.verticalFlip span {
+  display: block;
+  color: #0034B8;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; /* Ensure full width */
+  transform-origin: center bottom;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.sentence.home .verticalFlip #bySpan {
+  animation: flipOut 2.5s forwards 8s;
+}
+ 
+.sentence.home .verticalFlip #forSpan {
+  animation: flipIn 2.5s forwards 8s; /* Reduced delay to 5s */
+}
+
+#bySpan {
+  opacity: 1;
+  animation: flipOut 2.5s forwards 3s;
+}
+
+#forSpan {
+  opacity: 0;
+  animation: flipIn 2.5s forwards 3s; /* Reduced delay to 5s */
+}
+
+/* Keyframe Animation for Flip Out */
+@keyframes flipOut {
+  0% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateX(180deg);
+  }
+}
+
+/* Keyframe Animation for Flip In */
+@keyframes flipIn {
+  0% {
+    opacity: 0;
+    transform: rotateX(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+
+
+
+
 .no-pointer a {
   cursor: none;
   pointer-events: none;
@@ -430,6 +510,16 @@ ul.query-except-current-post li.custom-post-item:nth-child(3n + 3) {
   transition: opacity 0.3s ease;
   pointer-events: none;
   border-radius: 40px;
+}
+
+.wp-block-button.academy-button.is-style-fill .wp-block-button__link:hover {
+  color: #fff !important;
+  background-color: #05324e !important;
+  opacity: 1;
+}
+
+.wp-block-button.academy-button.is-style-fill .wp-block-button__link::before {
+  display: none;
 }
 
 .is-style-fill .wp-block-button__link:hover::before {
@@ -1084,11 +1174,15 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
 }
 
 .slider-3-items .slick-prev {
-  left: -35px;
+  left: -44px;
+  width: 64px;
+  height: 64px;
 }
 
 .slider-3-items .slick-next {
-  right: 0;
+  right: -48px;
+  width: 64px;
+  height: 64px;
 }
 
 .slider-3-items .slick-list {
@@ -1305,6 +1399,39 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
     align-items: center;
     justify-content: center;
   }
+
+  .section-comm-orange.wp-block-cover .wp-block-columns {
+    gap: 0;
+  }
+
+  .section-comm-orange.wp-block-cover .wp-block-columns .wp-block-column.left-one {
+    padding-bottom: 0 !important;
+  }
+
+  .section-comm-orange.wp-block-cover .wp-block-columns .wp-block-column.right-one {
+    padding-top: 0 !important;
+  }
+
+  .slider-3-items .slick-prev {
+    left: -27px;
+    width: 44px;
+    height: 44px;
+  }
+  
+  .slider-3-items .slick-next {
+    right: -27px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .slider-3-items .slick-track {
+    gap: 0 !important;
+  }
+
+  .wp-block-group.alignfull.library-slider.is-layout-constrained {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
 }
 
 @media only screen and (min-width: 782px) {
@@ -1385,3 +1512,22 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
     margin: 0 auto;
   }
 }
+
+@media only screen and (min-width: 782px) and (max-width: 1318px) {
+  .slider-3-items .slick-track {
+    gap: 40px;
+  }
+  .slider-3-items .slick-list {
+    margin: 0 40px 0 40px;
+  }
+  .slider-3-items .slick-next {
+    right: -15px;
+  }
+  .slider-3-items .slick-prev {
+    left: -14px;
+  }
+  .slick-initialized .slick-slide {
+    width: 339px !important;
+  }
+}
+
