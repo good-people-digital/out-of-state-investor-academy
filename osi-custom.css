@@ -545,6 +545,22 @@ ul.query-except-current-post li.custom-post-item:nth-child(3n + 3) {
   position: relative;
 }
 
+.hero-image-featured figure {
+  position: absolute;
+  top: 50%;
+  right: -56%;
+  width: 70%;
+  transform: translate(-50%,-50%) !important;
+}
+
+
+.hero-story-featured figure {
+  position: absolute;
+  bottom: 0;
+  width: 45%;
+}
+
+
 /* Button Variations
 --------------------------------------------- */
 .is-style-outline mark {
@@ -1206,6 +1222,13 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
   position: relative;
 }
 
+.graphic-featured figure {
+  position: absolute;
+  width: 54%;
+  top: 50%;
+  transform: translateY(-50%) !important;
+}
+
 #arrow-right-deco {
   position: absolute;
   bottom: -30px;
@@ -1285,6 +1308,20 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
   }
 }
 
+@media only screen and (max-width: 690px) {
+  .sentence {
+    flex-direction: column;
+  }
+
+  .verticalFlip {
+    width: 100% !important;
+    min-height: 50px;
+    margin-top: 3px;
+    text-indent: 0 !important;
+    margin-right: 0;
+  }
+}
+
 
 
 @media only screen and (min-width: 600px) and (max-width: 980px) {
@@ -1336,6 +1373,21 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
 @media only screen and (max-width: 781px) {
   figure.wp-block-image.free-course-img {
     margin-right: auto !important;
+  }
+
+  .hero-story-featured {
+    padding-top: 0 !important;
+  }
+
+  
+  .hero-image-featured figure,
+  .graphic-featured figure,
+  .hero-story-featured figure {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    transform: none !important;
   }
 
   .free-course-img.aos-animate.is-style-yellow-decorations {
@@ -1528,6 +1580,110 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
   }
   .slick-initialized .slick-slide {
     width: 339px !important;
+  }
+
+}
+
+@media only screen and (min-width: 782px) and (max-width: 1250px) {
+  .hero-image-featured figure {
+    position: absolute;
+    top: 54%;
+    right: -35%;
+    width: 67%;
+    transform: translate(-50%,-50%) !important;
+  }
+
+  .heading-featured {
+    padding-right: 25px;
+  }
+
+  .left-courses {
+    padding-right: 120px;
+  }
+
+  .graphic-featured figure {
+    position: absolute;
+    width: 58%;
+    top: 50%;
+    right: -2%;
+    transform: translateY(-50%) !important;
+  }
+
+  .hero-story-text {
+    padding-right: 100px;
+  }
+
+  .hero-story-featured figure {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 63%;
+  }
+}
+
+@media only screen and (min-width: 1223px) and (max-width: 1403px) {
+  .heading-featured {
+    padding-right: 32px;
+  } 
+}
+
+
+@media only screen and (min-width: 1251px) and (max-width: 1400px) {
+  .hero-image-featured figure {
+    position: absolute;
+    top: 62%;
+    right: -34%;
+    width: 65%;
+    transform: translate(-50%,-50%) !important;
+  }
+
+  .left-courses {
+    padding-right: 120px;
+  }
+
+  .graphic-featured figure {
+    position: absolute;
+    width: 54%;
+    top: 50%;
+    right: -2%;
+    transform: translateY(-50%) !important;
+  }
+
+  .hero-story-featured figure {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    width: 52%;
+  }
+}
+
+
+@media only screen and (min-width: 1401px) and (max-width: 1700px) {
+  .hero-image-featured figure {
+    position: absolute;
+    top: 50%;
+    right: -34%;
+    width: 58%;
+    transform: translate(-50%,-50%) !important;
+  }
+
+  .left-courses {
+    padding-right: 120px;
+  }
+
+  .graphic-featured figure {
+    position: absolute;
+    width: 54%;
+    top: 50%;
+    right: -2%;
+    transform: translateY(-50%) !important;
+  }
+
+  .hero-story-featured figure {
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    width: 50%;
   }
 }
 
