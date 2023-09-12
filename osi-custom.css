@@ -9,15 +9,8 @@
   border-radius: 40px 40px 0 0;
 }
 
-/* Underline Animations for Titles
---------------------------------------------- */
-
-mark {
-  background: unset;
-}
-
 /* Vertical Flip */
-.sentence  {
+.sentence {
   display: flex;
   justify-content: center;
 }
@@ -41,7 +34,6 @@ mark {
 
 .verticalFlip span {
   display: block;
-  color: #0034B8;
   opacity: 0;
   position: absolute;
   top: 0;
@@ -52,21 +44,23 @@ mark {
 }
 
 .sentence.home .verticalFlip #bySpan {
-  animation: flipOut 2.5s forwards 8s;
+  animation: flipOut 2.5s forwards 8s infinite;
 }
- 
+
 .sentence.home .verticalFlip #forSpan {
-  animation: flipIn 2.5s forwards 8s; /* Reduced delay to 5s */
+  animation: flipIn 2.5s forwards 8s infinite; /* Reduced delay to 5s */
 }
 
 #bySpan {
   opacity: 1;
-  animation: flipOut 2.5s forwards 3s;
+  color: var(--wp--preset--color--primary);
+  animation: flipOut 2.5s forwards 3s infinite;
 }
 
 #forSpan {
   opacity: 0;
-  animation: flipIn 2.5s forwards 3s; /* Reduced delay to 5s */
+  color: var(--wp--preset--color--secondary);
+  animation: flipIn 2.5s forwards 3s infinite; /* Reduced delay to 5s */
 }
 
 /* Keyframe Animation for Flip Out */
@@ -93,12 +87,31 @@ mark {
   }
 }
 
-
-
-
 .no-pointer a {
   cursor: none;
   pointer-events: none;
+}
+/* Jump Animation for Image
+--------------------------------------------- */
+.arrow-down-jump {
+  animation: jump 0.9s ease infinite;
+}
+
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+}
+
+/* Underline Animations for Titles
+--------------------------------------------- */
+
+mark {
+  background: unset;
 }
 
 .is-style-double-underline-animated mark,
@@ -550,16 +563,14 @@ ul.query-except-current-post li.custom-post-item:nth-child(3n + 3) {
   top: 50%;
   right: -56%;
   width: 70%;
-  transform: translate(-50%,-50%) !important;
+  transform: translate(-50%, -50%) !important;
 }
-
 
 .hero-story-featured figure {
   position: absolute;
   bottom: 0;
   width: 45%;
 }
-
 
 /* Button Variations
 --------------------------------------------- */
@@ -1261,7 +1272,6 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
 }
 
 @media only screen and (max-width: 599px) {
-
   .course-academy.wp-block-cover .wp-block-cover__image-background {
     left: 10%;
     top: 50%;
@@ -1326,8 +1336,6 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
   }
 }
 
-
-
 @media only screen and (min-width: 600px) and (max-width: 980px) {
   .video-container iframe,
   .video-container iframe .player {
@@ -1383,7 +1391,6 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
     padding-top: 0 !important;
   }
 
-  
   .hero-image-featured figure,
   .graphic-featured figure,
   .hero-story-featured figure {
@@ -1460,11 +1467,15 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
     gap: 0;
   }
 
-  .section-comm-orange.wp-block-cover .wp-block-columns .wp-block-column.left-one {
+  .section-comm-orange.wp-block-cover
+    .wp-block-columns
+    .wp-block-column.left-one {
     padding-bottom: 0 !important;
   }
 
-  .section-comm-orange.wp-block-cover .wp-block-columns .wp-block-column.right-one {
+  .section-comm-orange.wp-block-cover
+    .wp-block-columns
+    .wp-block-column.right-one {
     padding-top: 0 !important;
   }
 
@@ -1473,7 +1484,7 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
     width: 44px;
     height: 44px;
   }
-  
+
   .slider-3-items .slick-next {
     right: -27px;
     width: 44px;
@@ -1525,7 +1536,7 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
     left: 22%;
     top: 20%;
     z-index: 0;
-  } 
+  }
 
   .wp-block-cover.cover-academy .wp-block-cover__image-background {
     top: 10%;
@@ -1585,7 +1596,6 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
   .slick-initialized .slick-slide {
     width: 339px !important;
   }
-
 }
 
 @media only screen and (min-width: 782px) and (max-width: 1250px) {
@@ -1594,7 +1604,7 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
     top: 54%;
     right: -35%;
     width: 67%;
-    transform: translate(-50%,-50%) !important;
+    transform: translate(-50%, -50%) !important;
   }
 
   .heading-featured {
@@ -1628,9 +1638,8 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
 @media only screen and (min-width: 1223px) and (max-width: 1403px) {
   .heading-featured {
     padding-right: 32px;
-  } 
+  }
 }
-
 
 @media only screen and (min-width: 1251px) and (max-width: 1400px) {
   .hero-image-featured figure {
@@ -1638,7 +1647,7 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
     top: 62%;
     right: -34%;
     width: 65%;
-    transform: translate(-50%,-50%) !important;
+    transform: translate(-50%, -50%) !important;
   }
 
   .left-courses {
@@ -1661,14 +1670,13 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
   }
 }
 
-
 @media only screen and (min-width: 1401px) and (max-width: 1700px) {
   .hero-image-featured figure {
     position: absolute;
     top: 50%;
     right: -34%;
     width: 58%;
-    transform: translate(-50%,-50%) !important;
+    transform: translate(-50%, -50%) !important;
   }
 
   .left-courses {
@@ -1690,4 +1698,3 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
     width: 50%;
   }
 }
-
