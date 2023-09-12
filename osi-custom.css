@@ -49,6 +49,7 @@
 
 .sentence.home .verticalFlip #forSpan {
   animation: flipIn 2.5s forwards 8s infinite; /* Reduced delay to 5s */
+  color: #fff;
 }
 
 #bySpan {
