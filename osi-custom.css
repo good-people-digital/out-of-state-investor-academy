@@ -55,13 +55,13 @@
 #bySpan {
   opacity: 1;
   color: var(--wp--preset--color--primary);
-  animation: flipOut 2.5s forwards 3s infinite;
+  animation: flipOut 2.5s forwards 5s infinite;
 }
 
 #forSpan {
   opacity: 0;
   color: var(--wp--preset--color--secondary);
-  animation: flipIn 2.5s forwards 3s infinite; /* Reduced delay to 5s */
+  animation: flipIn 2.5s forwards 5s infinite;
 }
 
 /* Keyframe Animation for Flip Out */
@@ -87,7 +87,14 @@
     transform: rotateX(0deg);
   }
 }
-
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .no-pointer a {
   cursor: none;
   pointer-events: none;
