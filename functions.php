@@ -44,9 +44,9 @@ add_action( 'after_setup_theme', 'frost_setup' );
 add_action( 'wp_enqueue_scripts', 'frost_enqueue_style_sheet' );
 function frost_enqueue_style_sheet() {
 
-	wp_enqueue_style( 'frost', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'frost', get_template_directory_uri() . '/style.css');
 	
-	wp_enqueue_style( 'osi', get_template_directory_uri() . '/osi-custom.css', array());
+	wp_enqueue_style( 'osi-custom-css', get_template_directory_uri() . '/osi-custom-css-new.css');
 
 	wp_enqueue_script( 'osi-js', get_template_directory_uri() . '/osi-custom.js', array( 'jquery' ), '1.8.1', true );
 
