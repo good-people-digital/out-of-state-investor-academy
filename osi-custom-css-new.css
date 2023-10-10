@@ -10,9 +10,9 @@
 }
 
 .space-between {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+	display: flex;
+	flex-direction:column;
+	justify-content:space-between
 }
 
 /* Vertical Flip */
@@ -1506,11 +1506,11 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
     width: 44px;
     height: 44px;
   }
-
+/*
   .slider-3-items .slick-track {
     gap: 0 !important;
   }
-
+*/
   .wp-block-group.alignfull.library-slider.is-layout-constrained {
     padding-left: 30px !important;
     padding-right: 30px !important;
