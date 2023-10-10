@@ -82,7 +82,6 @@ function frost_register_block_styles() {
 		'core/image' => array(
 			'shadow-light' => __( 'Shadow', 'frost' ),
 			'shadow-solid' => __( 'Solid', 'frost' ),
-			'image-girl-animated' => __( 'Girl Img Animated', 'frost' ),
 			'yellow-decorations' => __( 'Yellow Decor', 'frost' ),
       'yellow-light-decorations' => __( 'Yellow Light Decor', 'frost' ),
 			'blue-decorations' => __( 'Blue Decor', 'frost' ),

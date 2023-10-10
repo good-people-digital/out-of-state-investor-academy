@@ -10,9 +10,9 @@
 }
 
 .space-between {
-	display: flex;
-	flex-direction:column;
-	justify-content:space-between
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Vertical Flip */
@@ -210,90 +210,6 @@ mark {
   }
 }
 
-/* Girl Image Animated
---------------------------------------------- */
-
-.aos-animate.is-style-image-girl-animated::after {
-  content: url("assets/images/girl-decor-top.svg");
-  right: -110px;
-  top: 0;
-  opacity: 0; /* Initial opacity */
-  animation: fadeIn 1s forwards;
-  animation-delay: 1s;
-}
-
-.aos-animate.is-style-image-girl-animated::before {
-  content: url("assets/images/girl-decor-bottom.svg");
-  right: 100%;
-  bottom: -9px;
-  opacity: 0; /* Initial opacity */
-  animation: fadeIn 1s forwards;
-  animation-delay: 0.5s;
-}
-
-.is-style-image-girl-animated {
-  position: relative;
-}
-
-.is-style-image-girl-animated::after,
-.is-style-image-girl-animated::before {
-  position: absolute;
-}
-
-.aos-animate.is-style-image-girl-animated {
-  height: 100%;
-  width: 100%;
-  background-repeat: no-repeat;
-  animation: bkgImg 1s forwards;
-  animation-delay: 1.5s;
-}
-
-.aos-animate.is-style-image-girl-animated img {
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-}
-
-@keyframes bkgImg {
-  from {
-    background-image: none;
-    background-position: 0 0;
-    background-size: 0;
-  }
-  to {
-    background-image: url("assets/images/background-girl-image.png");
-    background-position: 55px 10px;
-    background-size: contain;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .aos-animate.is-style-image-girl-animated::after,
-  .aos-animate.is-style-image-girl-animated::before {
-    content: unset;
-  }
-}
-@media only screen and (min-width: 786px) and (max-width: 1023px) {
-  .aos-animate.is-style-image-girl-animated::after,
-  .aos-animate.is-style-image-girl-animated::before {
-    content: unset;
-  }
-}
-@media only screen and (min-width: 800px) and (max-width: 1200px) {
-  .aos-animate.is-style-image-girl-animated::after {
-    top: -85px;
-  }
-}
 /* Decor Image Animated
 --------------------------------------------- */
 
@@ -643,6 +559,9 @@ form.inline-form input[type="submit"] {
   width: 50%;
 }
 
+form.form-w-border input:not[type="submit"] {
+  border: 1px solid var(--wp--preset--color--contrast);
+}
 /* Gravity Form Style
 --------------------------------------------- */
 .gform_wrapper.gravity-theme input[type="color"],
@@ -839,15 +758,15 @@ ul.is-style-custom-unorder-list > li::before {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  padding: 8px;
+  padding: 10px 8px 8px;
   background-color: var(--wp--preset--color--primary);
   color: var(--wp--preset--color--secondary);
   border-radius: 50%;
   position: absolute;
   left: 0;
-  top: 4px;
-  width: 28px;
-  height: 28px;
+  top: 0;
+  width: 26px;
+  height: 26px;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -1506,7 +1425,7 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
     width: 44px;
     height: 44px;
   }
-/*
+  /*
   .slider-3-items .slick-track {
     gap: 0 !important;
   }
