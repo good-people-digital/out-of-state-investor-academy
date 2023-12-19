@@ -310,6 +310,15 @@
 				},
 				{
 					"fluid": {
+						"min": "26px",
+						"max": "34px"
+					},
+					"name": "34px",
+					"size": "34px",
+					"slug": "max-34"
+				},
+				{
+					"fluid": {
 						"min": "28px",
 						"max": "46px"
 					},
@@ -325,6 +334,15 @@
 					"name": "56px",
 					"size": "56px",
 					"slug": "max-56"
+				},
+				{
+					"fluid": {
+						"min": "46px",
+						"max": "62px"
+					},
+					"name": "62px",
+					"size": "62px",
+					"slug": "max-62"
 				},
 				{
 					"fluid": {

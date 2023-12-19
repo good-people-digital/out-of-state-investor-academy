@@ -717,6 +717,10 @@ main.wp-block-group {
   box-shadow: 0px 0px 48px 0px rgba(9, 19, 68, 0.25);
 }
 
+.single-summit_library.postid-3766 .entry-content.wp-block-post-content {
+  margin-block-start: 0;
+}
+
 .wp-block-gallery {
   position: relative;
 }
@@ -830,6 +834,9 @@ blockquote.wp-block-quote {
   display: flex;
   align-items: center;
 }
+.wp-block-group.lp-faq .wp-block-yoast-faq-block .schema-faq-question {
+  color: var(--wp--preset--color--secondary);
+}
 .wp-block-yoast-faq-block .schema-faq-question.faq-q-open {
   color: var(--wp--preset--color--secondary);
 }
@@ -845,6 +852,12 @@ blockquote.wp-block-quote {
   border-left: unset;
   border-right: unset;
   margin-bottom: 0;
+}
+.wp-block-group.lp-faq .wp-block-yoast-faq-block .schema-faq-section {
+  border-top: none;
+}
+.wp-block-group.lp-faq .wp-block-yoast-faq-block .schema-faq-section:last-child {
+  border-bottom: none;
 }
 .wp-block-yoast-faq-block .schema-faq-section:last-child {
   border-bottom: 1px solid var(--wp--preset--color--gray-3);
