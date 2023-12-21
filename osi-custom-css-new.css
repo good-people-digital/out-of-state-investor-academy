@@ -774,6 +774,7 @@ ul.is-style-custom-unorder-list > li::before {
   align-items: center;
   justify-content: center;
   display: flex;
+  margin-top: 5px;
 }
 
 /* <ol> List
@@ -821,6 +822,21 @@ blockquote.wp-block-quote {
   color: var(--wp--preset--color--secondary);
   text-decoration: underline;
 }
+
+.single.single-summit_library .entry-content.wp-block-post-content a {
+  text-decoration: none !important;
+  color: var(--wp--preset--color--contrast) !important;
+}
+
+.single.single-summit_library .entry-content.wp-block-post-content .wp-block-group.lp-faq .wp-block-yoast-faq-block .schema-faq-question {
+  color: var(--wp--preset--color--secondary) !important;
+}
+
+.single.single-summit_library .entry-content.wp-block-post-content .terms a {
+  color: var(--wp--preset--color--base) !important;
+  text-decoration: none;
+}
+
 /* FAQ Yoast Block Style 
 --------------------------------------------- */
 
@@ -904,6 +920,18 @@ blockquote.wp-block-quote {
     width: 31px;
     height: 32px;
     font-size: 14px;
+  }
+
+  .lp-header-image {
+    margin-inline-start: 0 !important;
+  }
+
+  .footer-lp-row.wp-container-99.wp-container-99 {
+    justify-content: center;
+  }
+  .footer-lp-row p {
+    text-align: center;
+    display: inline !important;
   }
 }
 
@@ -1198,6 +1226,16 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
   justify-content: space-between;
 }
 
+/* LP Page */
+
+.column-lp-inside .fa-inside {
+  font-size: 60px;
+}
+
+.truth-section.wp-block-cover {
+  background-color: var(--wp--preset--color--contrast);
+}
+
 /* Media Queries
 --------------------------------------------- */
 
@@ -1241,6 +1279,19 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
   .wp-block-cover.boots-section .wp-block-cover__image-background {
     left: 20%;
     top: 23%;
+  }
+
+  .truth-section.wp-block-cover .wp-block-cover__image-background {
+    top: 30%;
+    left: -40px;
+  }
+
+  .truth-section.wp-block-cover .col-lp-figure {
+    order: 2;
+  }
+
+  .truth-section.wp-block-cover figure {
+    text-align: center;
   }
 
   .section-comm-orange.wp-block-cover .wp-block-cover__image-background {
@@ -1501,6 +1552,23 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
   .boots-section.wp-block-cover .wp-block-cover__image-background {
     left: 30%;
     top: 19%;
+  }
+
+  .truth-section.wp-block-cover .wp-block-cover__image-background {
+    top: 30%;
+    left: -128px;
+  }
+
+  .truth-section.wp-block-cover .wp-block-columns {
+    gap: 0;
+  }
+
+  .truth-section.wp-block-cover .col-lp-figure {
+    order: 2;
+  }
+
+  .truth-section.wp-block-cover figure {
+    text-align: center;
   }
 
   .section-comm-orange.wp-block-cover .wp-block-cover__image-background {
