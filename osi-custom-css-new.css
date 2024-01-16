@@ -1394,6 +1394,16 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
 }
 
 @media only screen and (max-width: 781px) {
+  .number-responsive {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .is-layout-flex.wp-block-columns.price-box.column-responsive {
+    padding-top: 0 !important;
+    gap: 0;
+    margin-block-start: 0;
+  }
   .slider-course-lp .wp-block-buttons {
     margin-top: 12px !important;
   }
