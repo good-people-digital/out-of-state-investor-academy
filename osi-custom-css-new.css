@@ -71,6 +71,19 @@
   animation: flipIn 2.5s forwards 5s infinite;
 }
 
+.wp-block-group.lp-faq .wp-block-yoast-faq-block .schema-faq-section {
+  border-top: 2px solid #5D83FA !important;
+  border-radius: 30px;
+  padding: 7px;
+  margin-bottom: 20px;
+  border: 2px solid #5D83FA;
+}
+
+.page-id-4315 .wp-block-group.lp-faq .wp-block-yoast-faq-block .schema-faq-section:last-child {
+  border-bottom: 2px solid #5D83FA !important;
+}
+
+
 /* Keyframe Animation for Flip Out */
 @keyframes flipOut {
   0% {
