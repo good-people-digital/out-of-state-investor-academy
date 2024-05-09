@@ -248,8 +248,8 @@
 					"slug": "merriweather",
 					"fontFace": [
 						{
-							"fontDisplay": "block",
-							"fontFamily": "Outfit",
+							"fontDisplay": "swap",
+							"fontFamily": "Merriweather",
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
