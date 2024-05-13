@@ -90,6 +90,7 @@ function frost_register_block_styles() {
 			'no-disc' => __( 'No Disc', 'frost' ),
       'custom-order-list' => __( 'Custom Order List', 'frost' ),
 			'custom-unorder-list' => __( 'Custom Unorder List', 'frost' ),
+			'custom-check-list' => __( 'Custom Check List', 'frost' ),
 		),
 		'core/navigation-link' => array(
 			'outline' => __( 'Outline', 'frost' ),

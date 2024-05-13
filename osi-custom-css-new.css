@@ -762,15 +762,30 @@ body.single:not(.single-tribe_events) .wp-block-post-content h6 {
 
 /* <ul> List
 --------------------------------------------- */
-ul.is-style-custom-unorder-list {
+ul.is-style-custom-unorder-list,
+ul.is-style-custom-check-list {
   list-style-type: none;
   padding: 0;
 }
-ul.is-style-custom-unorder-list > li {
+ul.is-style-custom-unorder-list > li,
+ul.is-style-custom-check-list > li {
   padding-left: 35px;
   position: relative;
   margin-bottom: 16px;
 }
+ul.is-style-custom-check-list > li {
+  padding-left: 85px;
+}
+ul.is-style-custom-check-list > li::before {
+  content: url("assets/images/out-of-state-investor-academy-check-icon.svg");
+  position: absolute;
+  left: 0;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
 ul.is-style-custom-unorder-list > li::before {
   content: "\f061";
   font-family: "Font Awesome 6 Pro";
@@ -2020,15 +2035,25 @@ body.logged-in .hb-bar-content {
   justify-content: center;
   margin-top: 0;
 }
-.slider-1-item .slick-next::before {
-  content: "\f061";
-  font-family: "Font Awesome 6 Pro";
+.slider-1-item .slick-next {
+  right: 0;
+}
+.slider-1-item .slick-prev {
+  left: 0px;
+}
+.slider-1-item .slick-next::before,
+.slider-1-item .slick-prev::before {
+  content: url("assets/images/out-of-state-investor-academy-arrow.svg");
 }
 .slider-1-item .slick-prev::before {
-  content: "\f060";
-  font-family: "Font Awesome 6 Pro";
+  transform: rotate(-180deg);
 }
-
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  background: var(--wp--preset--color--blue-2) !important;
+}
 /* Keyframe Animation for Flip Out */
 @keyframes flipOut {
   0% {
@@ -2117,6 +2142,10 @@ body.logged-in .hb-bar-content {
 
   .mobile-center {
     text-align: center;
+  }
+
+  .justify-center-mobile {
+    justify-content: center !important;
   }
 
   .mobile-center .wp-block-buttons.is-content-justification-left {
