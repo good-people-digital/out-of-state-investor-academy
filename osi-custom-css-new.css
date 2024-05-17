@@ -590,7 +590,13 @@ form.form-w-border input:not[type="submit"] {
 #ebook-form .formkit-fields p {
   margin: 0;
 }
-
+#ebook-form.inline-fields .formkit-fields {
+  gap: 20px;
+}
+#ebook-form.inline-fields .formkit-field {
+  flex: none !important;
+  width: calc(50% - 10px);
+}
 /* Gravity Form Style
 --------------------------------------------- */
 .gform_wrapper.gravity-theme input[type="color"],
