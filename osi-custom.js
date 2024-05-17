@@ -53,6 +53,6 @@ jQuery(document).ready(function ($) {
     arrows: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    adaptiveHeight: true,
+    adaptiveHeight: false,
   });
 });

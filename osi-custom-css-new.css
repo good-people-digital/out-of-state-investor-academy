@@ -577,6 +577,20 @@ form.inline-form input[type="submit"] {
 form.form-w-border input:not[type="submit"] {
   border: 1px solid var(--wp--preset--color--contrast);
 }
+
+#ebook-form .formkit-fields {
+  justify-content: center;
+}
+#ebook-form .formkit-fields button.formkit-submit {
+  background-color: #f3b806 !important;
+  padding: 15px 20px;
+  border-radius: 50px !important;
+  text-transform: uppercase;
+}
+#ebook-form .formkit-fields p {
+  margin: 0;
+}
+
 /* Gravity Form Style
 --------------------------------------------- */
 .gform_wrapper.gravity-theme input[type="color"],
@@ -775,15 +789,19 @@ ul.is-style-custom-check-list > li {
 }
 ul.is-style-custom-check-list > li {
   padding-left: 85px;
+  line-height: 60px;
 }
 ul.is-style-custom-check-list > li::before {
-  content: url("assets/images/out-of-state-investor-academy-check-icon.svg");
+  content: "";
+  background-image: url("assets/images/out-of-state-investor-academy-checkmark.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   position: absolute;
   left: 0;
   top: 0;
-  align-items: center;
-  justify-content: center;
-  display: flex;
+  width: 60px;
+  height: 60px;
 }
 
 ul.is-style-custom-unorder-list > li::before {
@@ -1299,9 +1317,22 @@ ul.tribe-events-c-nav__list .tribe-events-c-nav__list-item button:disabled {
   #affiliate-osi div#content {
     padding: 20px 10px !important;
   }
+  .padding-left-0-mobile {
+    padding-left: 0 !important;
+  }
 }
 
 @media only screen and (max-width: 599px) {
+  ul.is-style-custom-check-list > li {
+    padding-left: 70px;
+    line-height: 2;
+    margin-bottom: 25px;
+  }
+  ul.is-style-custom-check-list > li::before {
+    width: 40px;
+    height: 40px;
+  }
+
   .course-academy.wp-block-cover .wp-block-cover__image-background {
     left: 10%;
     top: 50%;
@@ -2054,6 +2085,19 @@ body.logged-in .hb-bar-content {
 .slick-next:focus {
   background: var(--wp--preset--color--blue-2) !important;
 }
+
+@media (max-width: 600px) {
+  .slider-1-item .slick-prev,
+  .slider-1-item .slick-next {
+    top: 100%;
+  }
+  .slider-1-item .slick-prev {
+    left: 20px;
+  }
+  .slider-1-item .slick-next {
+    right: 20px;
+  }
+}
 /* Keyframe Animation for Flip Out */
 @keyframes flipOut {
   0% {
@@ -2090,7 +2134,7 @@ body.logged-in .hb-bar-content {
   pointer-events: none;
 }
 .box-shadow-bottom {
-  box-shadow: 0 26px 29px -18px #000000;
+  box-shadow: 0 26px 29px -24px #000000;
 }
 @media only screen and (min-width: 960px) and (max-width: 1200px) {
   .wp-container-13.wp-container-13.course-columns {
@@ -2168,6 +2212,9 @@ body.logged-in .hb-bar-content {
 }
 
 @media only screen and (max-width: 690px) {
+  .h3-on-mobile {
+    font-size: 25px !important ;
+  }
   .sentence {
     flex-direction: column;
   }
